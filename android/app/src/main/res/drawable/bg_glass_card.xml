@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 外层阴影 -->
+    <item android:top="6dp" android:left="6dp" android:right="6dp" android:bottom="18dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0F1C2E5A" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+    
+    <!-- 主卡片层 - 磨砂玻璃效果 -->
+    <item android:top="0dp" android:left="0dp" android:right="6dp" android:bottom="12dp">
+        <shape android:shape="rectangle">
+            <!-- 半透明白色背景模拟磨砂玻璃 -->
+            <solid android:color="#D9FFFFFF" />
+            <corners android:radius="16dp" />
+            <stroke
+                android:width="0.5dp"
+                android:color="#33FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

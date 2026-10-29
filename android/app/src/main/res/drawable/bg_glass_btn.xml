@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- 主背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    
+    <!-- 磨砂玻璃效果 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#E0F2FF"
+                android:centerColor="#F0F8FF"
+                android:endColor="@color/white"
+                android:angle="135" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    
+    <!-- 边框 -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="@color/blue_300" />
+            <corners android:radius="6dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    
+    <!-- 高光效果 -->
+    <item android:top="0dp" android:height="20dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#30FFFFFF"
+                android:endColor="@android:color/transparent"
+                android:angle="90" />
+            <corners
+                android:topLeftRadius="6dp"
+                android:topRightRadius="6dp" />
+        </shape>
+    </item>
+    
+    <!-- 悬停状态 -->
+    <item>
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="#20007BFF" />
+                    <corners android:radius="6dp" />
+                </shape>
+            </item>
+            <item android:state_focused="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="#15007BFF" />
+                    <corners android:radius="6dp" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+    
+</layer-list>

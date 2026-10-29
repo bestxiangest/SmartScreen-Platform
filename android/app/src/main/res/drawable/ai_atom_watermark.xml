@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    
+    <!-- 原子核心 -->
+    <path
+        android:pathData="M16,13 A3,3 0 1,1 16,19 A3,3 0 1,1 16,13 Z"
+        android:fillColor="@color/white" />
+    
+    <!-- 电子轨道1 -->
+    <path
+        android:pathData="M16,4 A12,12 0 1,1 16,28 A12,12 0 1,1 16,4 Z"
+        android:strokeWidth="1"
+        android:strokeColor="@color/white"
+        android:fillColor="@android:color/transparent" />
+    
+    <!-- 电子轨道2 -->
+    <path
+        android:pathData="M6,16 A10,6 0 1,1 26,16 A10,6 0 1,1 6,16 Z"
+        android:strokeWidth="1"
+        android:strokeColor="@color/white"
+        android:fillColor="@android:color/transparent" />
+    
+    <!-- 电子轨道3 -->
+    <path
+        android:pathData="M6,16 A10,6 45 1,1 26,16 A10,6 45 1,1 6,16 Z"
+        android:strokeWidth="1"
+        android:strokeColor="@color/white"
+        android:fillColor="@android:color/transparent" />
+    
+    <!-- 电子粒子1 -->
+    <path
+        android:pathData="M28,14.5 A1.5,1.5 0 1,1 28,17.5 A1.5,1.5 0 1,1 28,14.5 Z"
+        android:fillColor="@color/blue_200" />
+    
+    <!-- 电子粒子2 -->
+    <path
+        android:pathData="M8,6.5 A1.5,1.5 0 1,1 8,9.5 A1.5,1.5 0 1,1 8,6.5 Z"
+        android:fillColor="@color/blue_200" />
+    
+    <!-- 电子粒子3 -->
+    <path
+        android:pathData="M24,22.5 A1.5,1.5 0 1,1 24,25.5 A1.5,1.5 0 1,1 24,22.5 Z"
+        android:fillColor="@color/blue_200" />
+    
+    <!-- AI标识 -->
+    <path
+        android:pathData="M13,20 L15,20 L15,22 L13,22 Z M17,20 L19,20 L19,22 L17,22 Z"
+        android:fillColor="@color/white" />
+    
+</vector>

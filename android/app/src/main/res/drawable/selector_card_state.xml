@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下状态 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/management_card_pressed" />
+            <corners android:radius="16dp" />
+            <stroke android:width="2dp" android:color="@color/management_primary_variant" />
+        </shape>
+    </item>
+    
+    <!-- 聚焦状态 -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/management_card_focused" />
+            <corners android:radius="16dp" />
+            <stroke android:width="2dp" android:color="@color/management_primary" />
+        </shape>
+    </item>
+    
+    <!-- 悬停状态 -->
+    <item android:state_hovered="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/management_card_hover" />
+            <corners android:radius="16dp" />
+            <stroke android:width="1dp" android:color="@color/management_primary_light" />
+        </shape>
+    </item>
+    
+    <!-- 默认状态 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/management_card_surface" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</selector>

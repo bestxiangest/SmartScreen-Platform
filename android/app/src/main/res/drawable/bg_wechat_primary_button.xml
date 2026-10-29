@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#30FFFFFF">
+    
+    <item>
+        <layer-list>
+            
+            <!-- 阴影层 -->
+            <item android:top="3dp" android:left="3dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#20000000" />
+                    <corners android:radius="16dp" />
+                </shape>
+            </item>
+            
+            <!-- 主背景层 - 微信绿色渐变 -->
+            <item android:bottom="3dp" android:right="3dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="#07C160"
+                        android:centerColor="#06AD56"
+                        android:endColor="#059A4C"
+                        android:angle="135" />
+                    <corners android:radius="16dp" />
+                </shape>
+            </item>
+            
+            <!-- 高光效果 -->
+            <item android:bottom="3dp" android:right="3dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="#40FFFFFF"
+                        android:centerColor="#20FFFFFF"
+                        android:endColor="#00FFFFFF"
+                        android:angle="90" />
+                    <corners android:radius="16dp" />
+                </shape>
+            </item>
+            
+        </layer-list>
+    </item>
+    
+</ripple>

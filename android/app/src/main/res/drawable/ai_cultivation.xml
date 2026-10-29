@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- AI芯片背景 -->
+    <path
+        android:fillColor="@color/blue_500"
+        android:pathData="M4,6 L20,6 A2,2 0 0,1 22,8 L22,16 A2,2 0 0,1 20,18 L4,18 A2,2 0 0,1 2,16 L2,8 A2,2 0 0,1 4,6 Z" />
+    
+    <!-- 芯片电路线条 -->
+    <path
+        android:strokeColor="@color/white"
+        android:strokeWidth="1"
+        android:pathData="M6,10 L10,10 M14,10 L18,10 M6,14 L10,14 M14,14 L18,14" />
+    
+    <!-- 中央AI核心 -->
+    <circle
+        android:fillColor="@color/orange_500"
+        android:centerX="12"
+        android:centerY="12"
+        android:radius="3dp" />
+    
+    <!-- AI文字 -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M10.5,11 L11.5,11 L11.5,13 L10.5,13 Z M12.5,11 L13.5,11 L13.5,13 L12.5,13 Z" />
+    
+    <!-- 连接点 -->
+    <circle
+        android:fillColor="@color/white"
+        android:centerX="8"
+        android:centerY="10"
+        android:radius="0.5dp" />
+    <circle
+        android:fillColor="@color/white"
+        android:centerX="16"
+        android:centerY="10"
+        android:radius="0.5dp" />
+    <circle
+        android:fillColor="@color/white"
+        android:centerX="8"
+        android:centerY="14"
+        android:radius="0.5dp" />
+    <circle
+        android:fillColor="@color/white"
+        android:centerX="16"
+        android:centerY="14"
+        android:radius="0.5dp" />
+        
+</vector>

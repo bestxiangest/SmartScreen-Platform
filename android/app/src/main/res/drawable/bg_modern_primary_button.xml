@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#30FFFFFF">
+    
+    <item>
+        <layer-list>
+            
+            <!-- 阴影层 -->
+            <item android:top="2dp" android:left="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#15000000" />
+                    <corners android:radius="14dp" />
+                </shape>
+            </item>
+            
+            <!-- 主背景层 - 科技蓝渐变 -->
+            <item android:bottom="2dp" android:right="2dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="#1565C0"
+                        android:centerColor="#1976D2"
+                        android:endColor="#0D47A1"
+                        android:angle="135" />
+                    <corners android:radius="14dp" />
+                </shape>
+            </item>
+            
+            <!-- 高光效果 -->
+            <item android:bottom="2dp" android:right="2dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="#30FFFFFF"
+                        android:centerColor="#15FFFFFF"
+                        android:endColor="#00FFFFFF"
+                        android:angle="90" />
+                    <corners android:radius="14dp" />
+                </shape>
+            </item>
+            
+        </layer-list>
+    </item>
+    
+</ripple>

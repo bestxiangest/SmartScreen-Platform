@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- 主渐变背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/blue_600"
+                android:centerColor="@color/blue_500"
+                android:endColor="@color/blue_700"
+                android:angle="135"
+                android:type="linear" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    
+    <!-- 金色描边 -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/gold_accent" />
+            <corners android:radius="6dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    
+    <!-- 顶部高光效果 -->
+    <item android:top="0dp" android:height="30dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#40FFFFFF"
+                android:endColor="@android:color/transparent"
+                android:angle="90" />
+            <corners
+                android:topLeftRadius="6dp"
+                android:topRightRadius="6dp" />
+        </shape>
+    </item>
+    
+</layer-list>
