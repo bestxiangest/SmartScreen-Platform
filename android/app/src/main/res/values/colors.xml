@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- 主色调 - 统一蓝色系 -->
+    <color name="primary">#1565C0</color>
+    <color name="primary_blue">#1565C0</color>
+    <color name="primary_blue_600">#0D47A1</color>
+    <color name="blue_500">#1565C0</color>
+    <color name="blue_600">#0D47A1</color>
+    <color name="blue_700">#1D4ED8</color>
+    <color name="blue_800">#1E40AF</color>
+    <color name="blue_100">#E3F2FD</color>
+    <color name="blue_200">#BBDEFB</color>
+    <color name="blue_300">#90CAF9</color>
+    <color name="blue_400">#42A5F5</color>
+    
+    <!-- 背景色 - 优化后的柔和色彩方案 -->
+    <color name="background">#F8F8F8</color>
+    <color name="background_light">#FAFAFA</color>
+    <color name="background_cultivation">#F0F4F8</color>
+    <color name="card_background">#F5F5F7</color>
+    <color name="surface_container">#F2F2F2</color>
+    
+    <!-- 基地介绍界面专用色彩 - 升级版 -->
+    <color name="base_intro_background">#F8FAFF</color>
+    <color name="base_intro_card_bg">#D9FFFFFF</color>
+    <color name="base_intro_card_hover">#6D8EEB</color>
+    <color name="base_intro_accent">#4A7EF6</color>
+    <color name="base_intro_secondary">#2C3E6F</color>
+    <color name="base_intro_title">#2C3E6F</color>
+    <color name="base_intro_tech_blue">#4A7EF6</color>
+    <color name="base_intro_light_blue">#6D8EEB</color>
+    
+    <!-- 文字颜色 - 优化对比度 -->
+    <color name="text_primary">#1C1B1F</color>
+    <color name="text_secondary">#49454F</color>
+    <color name="text_muted">#79747E</color>
+    <color name="text_light">#adb5bd</color>
+    <color name="text_hint">#9CA3AF</color>
+    
+    <!-- 状态颜色 -->
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="red">#F44336</color>
+    <color name="green_500">#10B981</color>
+    <color name="green_600">#059669</color>
+    <color name="green_50">#ECFDF5</color>
+    <color name="red_500">#EF4444</color>
+    <color name="red_600">#DC2626</color>
+    <color name="red_50">#FEF2F2</color>
+    <color name="blue_50">#EFF6FF</color>
+    <color name="orange_500">#F59E0B</color>
+    <color name="orange_600">#D97706</color>
+    <color name="purple_500">#8B5CF6</color>
+    <color name="purple_600">#7C3AED</color>
+    <color name="teal_500">#14B8A6</color>
+    <color name="teal_600">#0D9488</color>
+    
+    <!-- 强调色 -->
+    <color name="accent_red">#F44336</color>
+    <color name="gold_accent">#FFD700</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="red_800">#C62828</color>
+    <color name="red_200">#FFCDD2</color>
+    
+    <!-- 边框和分割线 -->
+    <color name="border_light">#dee2e6</color>
+    <color name="border_medium">#ced4da</color>
+    <color name="divider_color">#e9ecef</color>
+    
+    <!-- 悬停和选中状态 -->
+    <color name="hover_background">#e9ecef</color>
+    <color name="selected_background">#007bff</color>
+    
+    <!-- 导航图标颜色 -->
+    <color name="nav_icon_color">#6c757d</color>
+    <!-- Material Design Indigo 500 -->
+    <color name="indigo_500">#3F51B5</color>
+    
+    <!-- Gray 系列颜色 -->
+    <color name="gray_50">#F9FAFB</color>
+    <color name="gray_100">#F3F4F6</color>
+    <color name="gray_400">#9CA3AF</color>
+    <color name="gray_500">#6B7280</color>
+    <color name="gray_200">#E5E7EB</color>
+    <color name="gray_300">#D1D5DB</color>
+    <color name="gray_600">#4B5563</color>
+    <color name="gray_700">#374151</color>
+    <color name="gray_800">#1F2937</color>
+    <color name="gray_900">#111827</color>
+    
+    <!-- 基地文化界面专用颜色 -->
+    <color name="culture_primary">#2563EB</color>
+    <color name="culture_secondary">#D97706</color>
+    <color name="culture_background">#F8FAFC</color>
+    <color name="culture_card_background">#F5F5F7</color>
+    
+    <!-- 基地文化界面主题颜色 -->
+    <color name="culture_theme_red">#DC2626</color>
+    <color name="culture_theme_blue">#1E40AF</color>
+    <color name="culture_theme_teal">#0F766E</color>
+    <color name="culture_theme_amber">#D97706</color>
+    <color name="culture_theme_indigo">#4338CA</color>
+    
+    <!-- 文化主题特定颜色 -->
+    <color name="culture_theme_1_bg">#FEF2F2</color> <!-- 徽章红底色 -->
+    <color name="culture_theme_2_bg">#EFF6FF</color> <!-- 深蓝科技感 -->
+    <color name="culture_theme_3_bg">#F0FDFA</color> <!-- 青瓷纹理 -->
+    <color name="culture_theme_4_bg">#FFFBEB</color> <!-- 渐变金 -->
+    <color name="culture_theme_5_bg">#EEF2FF</color> <!-- 互联线条底纹 -->
+    
+    <!-- 按钮颜色 - 优化后 -->
+    <color name="primary_color">#007bff</color>
+    <color name="button_normal">#F5F5F7</color>
+    <color name="button_pressed">#E3F2FD</color>
+    <color name="button_focused">#F0F4F8</color>
+    <color name="button_border">#D0D0D0</color>
+    <color name="nav_text_color">#343a40</color>
+
+</resources>

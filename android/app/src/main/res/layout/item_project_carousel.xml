@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_project_card">
+
+    <!-- 项目图片 -->
+    <ImageView
+        android:id="@+id/project_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:background="@color/blue_500" />
+
+    <!-- 项目信息容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <!-- 项目标题 -->
+        <TextView
+            android:id="@+id/project_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏆 5G毫米波通信系统"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 项目成就 -->
+        <TextView
+            android:id="@+id/project_achievement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获得全国大学生电子设计竞赛一等奖"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_600"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 项目描述 -->
+        <TextView
+            android:id="@+id/project_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="实现28GHz频段高速数据传输，技术达到国际先进水平。该系统采用先进的毫米波技术，支持超高速数据传输，为5G通信技术发展做出重要贡献。"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="4"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+</LinearLayout>

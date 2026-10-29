@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通信电子创新基地 - 电子班牌</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Lucide图标库 -->
+    <script src="https://unpkg.com/lucide-react@0.378.0/dist/umd/lucide.min.js"></script>
+    <!-- 引入Poppins和Inter字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* 更明亮的浅灰色背景 */
+            overflow: hidden;
+            color: #343a40;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* 自定义滚动条 */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #dee2e6;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #ced4da;
+        }
+        /* 侧边栏导航项样式 */
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            color: #495057;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .nav-link:hover {
+            background-color: #e9ecef;
+            color: #0056b3;
+        }
+        .nav-link.active {
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+        }
+        /* 内容视图切换动画 */
+        .content-view {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .content-view.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex h-screen w-screen">
+
+    <!-- 1. 左侧导航栏 -->
+    <aside class="w-72 bg-white flex-shrink-0 p-6 flex flex-col justify-between">
+        <div>
+            <!-- Logo和标题 -->
+            <div class="flex items-center gap-3 mb-10">
+                <div class="bg-blue-600 p-3 rounded-xl text-white">
+                    <i data-lucide="antenna" class="w-7 h-7"></i>
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">通信电子创新基地</h1>
+            </div>
+            <!-- 导航链接 -->
+            <nav id="sidebar-nav" class="space-y-3">
+                <a href="#" class="nav-link active" onclick="switchView('home'); return false;">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i> 基地首页
+                </a>
+                <a href="#" class="nav-link" onclick="switchView('schedule'); return false;">
+                    <i data-lucide="calendar-days" class="w-5 h-5 mr-3"></i> 预约日程
+                </a>
+                <a href="#" class="nav-link" onclick="switchView('equipment'); return false;">
+                    <i data-lucide="cpu" class="w-5 h-5 mr-3"></i> 设备中心
+                </a>
+                <a href="#" class="nav-link" onclick="switchView('projects'); return false;">
+                    <i data-lucide="rocket" class="w-5 h-5 mr-3"></i> 项目展示
+                </a>
+                <a href="#" class="nav-link" onclick="switchView('safety'); return false;">
+                    <i data-lucide="shield-alert" class="w-5 h-5 mr-3"></i> 安全须知
+                </a>
+            </nav>
+        </div>
+        <!-- 时间日期 -->
+        <div class="text-center">
+            <p id="current-time" class="text-4xl font-bold text-gray-800">17:34:00</p>
+            <p id="current-date" class="text-sm text-gray-500 mt-1">2025年7月7日 星期一</p>
+        </div>
+    </aside>
+
+    <!-- 2. 右侧主内容区 -->
+    <main class="flex-grow p-8 overflow-y-auto custom-scrollbar">
+        
+        <!-- 视图 1: 基地首页 (默认显示) -->
+        <div id="view-home" class="content-view active">
+            <h2 class="text-4xl font-extrabold text-gray-800">基地动态</h2>
+            <p class="text-gray-500 mt-2">欢迎来到通信电子创新基地，探索科技前沿。</p>
+            
+            <div class="grid grid-cols-3 gap-6 mt-8">
+                <!-- 基地优秀项目成果展示 -->
+                <div class="col-span-2 bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">基地优秀项目成果</h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+                            <img src="https://placehold.co/400x200/3B82F6/FFFFFF?text=5G毫米波通信系统" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h4 class="font-bold text-blue-800 mb-2">🏆 5G毫米波通信系统</h4>
+                                <p class="text-sm text-gray-600">获得全国大学生电子设计竞赛一等奖，实现28GHz频段高速数据传输，技术达到国际先进水平</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+                            <img src="https://placehold.co/400x200/10B981/FFFFFF?text=智能无人机集群" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h4 class="font-bold text-green-800 mb-2">🚀 智能无人机集群</h4>
+                                <p class="text-sm text-gray-600">基于AI算法的多机协同控制系统，已申请国家发明专利3项，实现了复杂环境下的自主导航</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 天气状况 -->
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-lg">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center mb-3">
+                            <i data-lucide="cloud" class="w-8 h-8 mr-2"></i>
+                            <span class="text-lg font-semibold">南昌新建区</span>
+                        </div>
+                        <div id="weather-info">
+                            <p class="text-4xl font-bold mb-2" id="temperature">29°C</p>
+                            <p class="text-lg mb-2" id="weather-desc">阴</p>
+                            <div class="text-sm space-y-1">
+                                <p>湿度: <span id="humidity">62%</span></p>
+                                <p>风向: <span id="wind-direction">南风</span></p>
+                                <p>风力: <span id="wind-power">≤3级</span></p>
+                            </div>
+                        </div>
+                        <p class="text-xs mt-3 opacity-75" id="update-time">更新时间: 17:03</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 重要通知 (下移后的位置) -->
+            <div class="mt-6 bg-white p-5 rounded-2xl shadow-sm">
+                <h3 class="text-lg font-bold mb-3">重要通知</h3>
+                <div class="space-y-3">
+                    <div class="p-3 bg-gray-50 rounded-lg border-l-3 border-blue-300">
+                        <p class="font-medium text-gray-800">【技术分享会】本周五下午3点，将举办关于"5G毫米波技术"的分享会，欢迎参加！</p>
+                        <p class="text-xs text-gray-500 mt-1">地点：实验楼A301 | 主讲：李教授</p>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg border-l-3 border-orange-300">
+                        <p class="font-medium text-gray-800">【安全提醒】高压实验区设备已完成维护，使用前请务必阅读新版操作手册。</p>
+                        <p class="text-xs text-gray-500 mt-1">注意事项：必须佩戴防护用具，严禁单人操作</p>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg border-l-3 border-green-300">
+                        <p class="font-medium text-gray-800">【设备更新】新采购的频谱分析仪已到货，现已开放预约使用。</p>
+                        <p class="text-xs text-gray-500 mt-1">型号：R&S FSW26 | 预约方式：扫码或在线申请</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-white p-6 rounded-2xl shadow-sm">
+                 <h3 class="text-xl font-bold mb-4">快速入口</h3>
+                 <div class="grid grid-cols-4 gap-4">
+                    <button class="p-4 bg-gray-100 hover:bg-gray-200 rounded-lg text-center transition">
+                        <i data-lucide="calendar-plus" class="w-8 h-8 mx-auto text-blue-600"></i>
+                        <span class="mt-2 text-sm font-semibold block">预约设备</span>
+                    </button>
+                    <button class="p-4 bg-gray-100 hover:bg-gray-200 rounded-lg text-center transition">
+                        <i data-lucide="scan-line" class="w-8 h-8 mx-auto text-green-600"></i>
+                        <span class="mt-2 text-sm font-semibold block">扫码签到</span>
+                    </button>
+                     <button class="p-4 bg-gray-100 hover:bg-gray-200 rounded-lg text-center transition">
+                        <i data-lucide="book-open" class="w-8 h-8 mx-auto text-indigo-600"></i>
+                        <span class="mt-2 text-sm font-semibold block">资源中心</span>
+                    </button>
+                     <button class="p-4 bg-gray-100 hover:bg-gray-200 rounded-lg text-center transition">
+                        <i data-lucide="help-circle" class="w-8 h-8 mx-auto text-red-600"></i>
+                        <span class="mt-2 text-sm font-semibold block">紧急求助</span>
+                    </button>
+                 </div>
+            </div>
+        </div>
+
+        <!-- 视图 2: 预约日程 -->
+        <div id="view-schedule" class="content-view">
+            <h2 class="text-4xl font-extrabold text-gray-800">预约日程</h2>
+            <p class="text-gray-500 mt-2">查看并管理所有设备的预约情况。</p>
+            
+            <!-- 今日预约概览 -->
+            <div class="grid grid-cols-4 gap-4 mt-6">
+                <div class="bg-blue-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">8</p>
+                    <p class="text-sm opacity-90">今日预约</p>
+                </div>
+                <div class="bg-green-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">3</p>
+                    <p class="text-sm opacity-90">进行中</p>
+                </div>
+                <div class="bg-orange-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">2</p>
+                    <p class="text-sm opacity-90">待开始</p>
+                </div>
+                <div class="bg-gray-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">3</p>
+                    <p class="text-sm opacity-90">已完成</p>
+                </div>
+            </div>
+
+            <!-- 详细预约列表 -->
+            <div class="mt-6 bg-white p-6 rounded-2xl shadow-sm">
+                <h3 class="text-lg font-bold mb-4">今日预约详情</h3>
+                <div class="space-y-3">
+                    <div class="grid grid-cols-12 gap-4 items-center p-3 bg-green-50 rounded-lg border border-green-200">
+                        <div class="col-span-2 text-sm text-gray-600">08:30 - 11:30</div>
+                        <div class="col-span-4 font-medium">5G信号分析平台</div>
+                        <div class="col-span-3 text-sm text-gray-600">张伟团队 (4人)</div>
+                        <div class="col-span-3"><span class="px-2 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full">进行中</span></div>
+                    </div>
+                    <div class="grid grid-cols-12 gap-4 items-center p-3 bg-blue-50 rounded-lg border border-blue-200">
+                        <div class="col-span-2 text-sm text-gray-600">09:00 - 12:00</div>
+                        <div class="col-span-4 font-medium">频谱分析仪 R&S FSW26</div>
+                        <div class="col-span-3 text-sm text-gray-600">李明</div>
+                        <div class="col-span-3"><span class="px-2 py-1 text-xs font-medium text-blue-800 bg-blue-100 rounded-full">进行中</span></div>
+                    </div>
+                    <div class="grid grid-cols-12 gap-4 items-center p-3 bg-orange-50 rounded-lg border border-orange-200">
+                        <div class="col-span-2 text-sm text-gray-600">14:00 - 17:00</div>
+                        <div class="col-span-4 font-medium">FPGA开发套件</div>
+                        <div class="col-span-3 text-sm text-gray-600">王晓团队 (3人)</div>
+                        <div class="col-span-3"><span class="px-2 py-1 text-xs font-medium text-orange-800 bg-orange-100 rounded-full">待开始</span></div>
+                    </div>
+                    <div class="grid grid-cols-12 gap-4 items-center p-3 bg-orange-50 rounded-lg border border-orange-200">
+                        <div class="col-span-2 text-sm text-gray-600">15:30 - 18:30</div>
+                        <div class="col-span-4 font-medium">矢量网络分析仪</div>
+                        <div class="col-span-3 text-sm text-gray-600">陈佳</div>
+                        <div class="col-span-3"><span class="px-2 py-1 text-xs font-medium text-orange-800 bg-orange-100 rounded-full">待开始</span></div>
+                    </div>
+                    <div class="grid grid-cols-12 gap-4 items-center p-3 bg-gray-50 rounded-lg border border-gray-200">
+                        <div class="col-span-2 text-sm text-gray-600">06:00 - 09:00</div>
+                        <div class="col-span-4 font-medium">示波器 #2</div>
+                        <div class="col-span-3 text-sm text-gray-600">赵强</div>
+                        <div class="col-span-3"><span class="px-2 py-1 text-xs font-medium text-gray-600 bg-gray-200 rounded-full">已完成</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 视图 3: 设备中心 -->
+        <div id="view-equipment" class="content-view">
+            <h2 class="text-4xl font-extrabold text-gray-800">设备中心</h2>
+            <p class="text-gray-500 mt-2">浏览实验室的所有高精尖设备。</p>
+            
+            <!-- 设备统计 -->
+            <div class="grid grid-cols-4 gap-4 mt-6">
+                <div class="bg-blue-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">15</p>
+                    <p class="text-sm opacity-90">设备总数</p>
+                </div>
+                <div class="bg-green-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">12</p>
+                    <p class="text-sm opacity-90">可用设备</p>
+                </div>
+                <div class="bg-red-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">3</p>
+                    <p class="text-sm opacity-90">使用中</p>
+                </div>
+                <div class="bg-orange-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">0</p>
+                    <p class="text-sm opacity-90">维护中</p>
+                </div>
+            </div>
+
+            <!-- 设备分类 -->
+            <div class="mt-6">
+                <h3 class="text-lg font-bold mb-4">测量仪器</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/400x200/3B82F6/FFFFFF?text=示波器" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-800">泰克 MSO4B 示波器</h4>
+                            <p class="text-xs text-gray-500 mt-1">带宽: 1GHz | 采样率: 6.25GS/s</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="px-2 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full">可用</span>
+                                <button class="px-3 py-1 text-xs bg-blue-600 text-white rounded-lg hover:bg-blue-700">预约</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/400x200/10B981/FFFFFF?text=频谱分析仪" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-800">R&S FSW26 频谱分析仪</h4>
+                            <p class="text-xs text-gray-500 mt-1">频率范围: 2Hz-26.5GHz</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="px-2 py-1 text-xs font-medium text-red-800 bg-red-100 rounded-full">使用中</span>
+                                <button class="px-3 py-1 text-xs bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed">不可用</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/400x200/8B5CF6/FFFFFF?text=矢量网络分析仪" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-800">是德 E5071C 矢量网络分析仪</h4>
+                            <p class="text-xs text-gray-500 mt-1">频率范围: 300kHz-20GHz</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="px-2 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full">可用</span>
+                                <button class="px-3 py-1 text-xs bg-blue-600 text-white rounded-lg hover:bg-blue-700">预约</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 开发平台 -->
+            <div class="mt-6">
+                <h3 class="text-lg font-bold mb-4">开发平台</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/400x200/F59E0B/FFFFFF?text=FPGA开发套件" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-800">Xilinx Zynq UltraScale+</h4>
+                            <p class="text-xs text-gray-500 mt-1">ARM Cortex-A53 + FPGA</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="px-2 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full">可用</span>
+                                <button class="px-3 py-1 text-xs bg-blue-600 text-white rounded-lg hover:bg-blue-700">预约</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/400x200/EF4444/FFFFFF?text=5G信号分析平台" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-800">5G信号分析平台</h4>
+                            <p class="text-xs text-gray-500 mt-1">支持Sub-6GHz和毫米波</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="px-2 py-1 text-xs font-medium text-red-800 bg-red-100 rounded-full">使用中</span>
+                                <button class="px-3 py-1 text-xs bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed">不可用</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/400x200/6366F1/FFFFFF?text=SDR平台" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-800">USRP B210 SDR平台</h4>
+                            <p class="text-xs text-gray-500 mt-1">70MHz-6GHz 全双工</p>
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="px-2 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full">可用</span>
+                                <button class="px-3 py-1 text-xs bg-blue-600 text-white rounded-lg hover:bg-blue-700">预约</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 视图 4: 项目展示 -->
+        <div id="view-projects" class="content-view">
+            <h2 class="text-4xl font-extrabold text-gray-800">项目展示</h2>
+            <p class="text-gray-500 mt-2">见证从灵感到现实的非凡创造。</p>
+            
+            <!-- 项目统计 -->
+            <div class="grid grid-cols-4 gap-4 mt-6">
+                <div class="bg-purple-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">28</p>
+                    <p class="text-sm opacity-90">总项目数</p>
+                </div>
+                <div class="bg-green-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">12</p>
+                    <p class="text-sm opacity-90">获奖项目</p>
+                </div>
+                <div class="bg-blue-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">8</p>
+                    <p class="text-sm opacity-90">专利申请</p>
+                </div>
+                <div class="bg-orange-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">5</p>
+                    <p class="text-sm opacity-90">产业化</p>
+                </div>
+            </div>
+
+            <!-- 获奖项目 -->
+            <div class="mt-6">
+                <h3 class="text-lg font-bold mb-4">🏆 获奖项目</h3>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/500x250/3B82F6/FFFFFF?text=5G毫米波通信系统" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-gray-800">5G毫米波通信系统</h4>
+                                <span class="px-2 py-1 text-xs font-medium text-yellow-800 bg-yellow-100 rounded-full">国家一等奖</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">实现28GHz频段高速数据传输，传输速率达10Gbps，获得全国大学生电子设计竞赛一等奖</p>
+                            <div class="flex justify-between text-xs text-gray-500">
+                                <span>团队：张伟、李明、王强</span>
+                                <span>2024年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/500x250/10B981/FFFFFF?text=智能无人机集群" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-gray-800">智能无人机集群系统</h4>
+                                <span class="px-2 py-1 text-xs font-medium text-blue-800 bg-blue-100 rounded-full">省级特等奖</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">基于AI算法的多机协同控制，实现复杂环境下自主导航和任务分配，已申请发明专利3项</p>
+                            <div class="flex justify-between text-xs text-gray-500">
+                                <span>团队：陈佳、刘洋、赵敏</span>
+                                <span>2024年</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 在研项目 -->
+            <div class="mt-6">
+                <h3 class="text-lg font-bold mb-4">🔬 在研项目</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-xl shadow-sm p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-medium text-gray-800">6G太赫兹通信</h4>
+                            <span class="px-2 py-1 text-xs font-medium text-purple-800 bg-purple-100 rounded-full">进行中</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">探索太赫兹频段无线通信技术</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-500 h-2 rounded-full" style="width: 65%"></div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">进度: 65%</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-medium text-gray-800">量子通信安全</h4>
+                            <span class="px-2 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full">进行中</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">量子密钥分发与安全通信协议</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">进度: 40%</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-medium text-gray-800">边缘计算平台</h4>
+                            <span class="px-2 py-1 text-xs font-medium text-orange-800 bg-orange-100 rounded-full">进行中</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">面向IoT的智能边缘计算架构</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-orange-500 h-2 rounded-full" style="width: 80%"></div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">进度: 80%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 视图 5: 安全须知 -->
+        <div id="view-safety" class="content-view">
+            <h2 class="text-4xl font-extrabold text-gray-800">实验室安全须知</h2>
+            <p class="text-gray-500 mt-2">安全第一，规范操作，共创和谐实验环境。</p>
+            
+            <!-- 安全统计 -->
+            <div class="grid grid-cols-4 gap-4 mt-6">
+                <div class="bg-green-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">365</p>
+                    <p class="text-sm opacity-90">安全运行天数</p>
+                </div>
+                <div class="bg-blue-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">0</p>
+                    <p class="text-sm opacity-90">安全事故</p>
+                </div>
+                <div class="bg-purple-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">156</p>
+                    <p class="text-sm opacity-90">安全培训人次</p>
+                </div>
+                <div class="bg-orange-500 text-white p-4 rounded-xl text-center">
+                    <p class="text-2xl font-bold">98%</p>
+                    <p class="text-sm opacity-90">安全合规率</p>
+                </div>
+            </div>
+
+            <!-- 重要安全提醒 -->
+            <div class="bg-red-50 border border-red-200 rounded-xl p-6 mt-6">
+                <h3 class="text-red-800 font-bold text-lg mb-4">⚠️ 重要安全提醒</h3>
+                <div class="grid grid-cols-2 gap-6">
+                    <ul class="space-y-2 text-red-700">
+                        <li class="flex items-center"><span class="mr-2">🦺</span>进入实验室必须穿戴防护用品</li>
+                        <li class="flex items-center"><span class="mr-2">🚭</span>严禁在实验室内饮食和吸烟</li>
+                        <li class="flex items-center"><span class="mr-2">📖</span>使用设备前必须阅读操作手册</li>
+                        <li class="flex items-center"><span class="mr-2">🚨</span>发现安全隐患立即报告管理员</li>
+                    </ul>
+                    <ul class="space-y-2 text-red-700">
+                        <li class="flex items-center"><span class="mr-2">🧹</span>实验结束后及时清理工作台</li>
+                        <li class="flex items-center"><span class="mr-2">🔌</span>离开时务必关闭所有电源</li>
+                        <li class="flex items-center"><span class="mr-2">🔒</span>贵重设备使用后及时归位锁好</li>
+                        <li class="flex items-center"><span class="mr-2">👥</span>禁止单人操作高风险实验</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 安全操作规范 -->
+            <div class="mt-6">
+                <h3 class="text-lg font-bold mb-4">📋 安全操作规范</h3>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                            <span class="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">⚡</span>
+                            电气安全
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>• 使用前检查电源线是否完好</li>
+                            <li>• 湿手禁止触摸电气设备</li>
+                            <li>• 设备故障时立即断电报修</li>
+                            <li>• 严禁私拉乱接电源线</li>
+                            <li>• 大功率设备需专人操作</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                            <span class="bg-green-100 text-green-600 p-2 rounded-lg mr-3">🧪</span>
+                            化学安全
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>• 佩戴护目镜和防护手套</li>
+                            <li>• 在通风橱内操作有害物质</li>
+                            <li>• 化学品分类存放标识清楚</li>
+                            <li>• 废液分类收集不得混合</li>
+                            <li>• 意外接触立即冲洗就医</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 应急处理 -->
+            <div class="mt-6">
+                <h3 class="text-lg font-bold mb-4">🚑 应急处理</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+                        <h4 class="font-bold text-red-800 mb-2 flex items-center">
+                            <span class="mr-2">🔥</span>火灾处理
+                        </h4>
+                        <ol class="text-xs text-red-700 space-y-1">
+                            <li>1. 立即切断电源</li>
+                            <li>2. 使用灭火器扑救</li>
+                            <li>3. 疏散人员报警</li>
+                            <li>4. 等待消防救援</li>
+                        </ol>
+                        <p class="text-xs text-red-600 mt-2 font-medium">报警电话：119</p>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+                        <h4 class="font-bold text-yellow-800 mb-2 flex items-center">
+                            <span class="mr-2">⚡</span>触电处理
+                        </h4>
+                        <ol class="text-xs text-yellow-700 space-y-1">
+                            <li>1. 立即切断电源</li>
+                            <li>2. 用绝缘物移开电源</li>
+                            <li>3. 检查伤者呼吸心跳</li>
+                            <li>4. 实施心肺复苏</li>
+                        </ol>
+                        <p class="text-xs text-yellow-600 mt-2 font-medium">急救电话：120</p>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                        <h4 class="font-bold text-blue-800 mb-2 flex items-center">
+                            <span class="mr-2">🧪</span>化学品泄漏
+                        </h4>
+                        <ol class="text-xs text-blue-700 space-y-1">
+                            <li>1. 疏散无关人员</li>
+                            <li>2. 穿戴防护用品</li>
+                            <li>3. 用吸附材料清理</li>
+                            <li>4. 通风稀释有害气体</li>
+                        </ol>
+                        <p class="text-xs text-blue-600 mt-2 font-medium">管理员：内线8888</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 联系方式 -->
+            <div class="bg-gray-50 rounded-xl p-6 mt-6">
+                <h3 class="text-lg font-bold mb-4">📞 紧急联系方式</h3>
+                <div class="grid grid-cols-2 gap-6 text-sm">
+                    <div>
+                        <p class="font-medium text-gray-800">实验室管理员</p>
+                        <p class="text-gray-600">张老师：138-0000-1234</p>
+                        <p class="text-gray-600">李老师：139-0000-5678</p>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-800">安全责任人</p>
+                        <p class="text-gray-600">王主任：137-0000-9999</p>
+                        <p class="text-gray-600">办公室：0791-88888888</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // 渲染图标
+        lucide.createIcons();
+
+        // 更新时间和日期
+        function updateTime() {
+            const now = new Date();
+            const timeEl = document.getElementById('current-time');
+            const dateEl = document.getElementById('current-date');
+            timeEl.textContent = now.toLocaleTimeString('zh-CN', { hour12: false, hour: '2-digit', minute: '2-digit' });
+            const dateString = now.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
+            const dayOfWeekString = new Intl.DateTimeFormat('zh-CN', { weekday: 'long' }).format(now);
+            dateEl.textContent = `${dateString} ${dayOfWeekString}`;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // 天气API调用功能
+        async function fetchWeatherData() {
+            try {
+                const response = await fetch('https://restapi.amap.com/v3/weather/weatherInfo?city=360112&key=06ab3ec992282fb5e6d3c5bb9604af7f');
+                const data = await response.json();
+                
+                if (data.status === '1' && data.lives && data.lives.length > 0) {
+                    const weather = data.lives[0];
+                    updateWeatherDisplay(weather);
+                } else {
+                    console.log('天气数据获取失败，使用默认数据');
+                }
+            } catch (error) {
+                console.log('天气API调用失败，使用默认数据:', error);
+            }
+        }
+
+        function updateWeatherDisplay(weather) {
+            document.getElementById('temperature').textContent = weather.temperature + '°C';
+            document.getElementById('weather-desc').textContent = weather.weather;
+            document.getElementById('humidity').textContent = weather.humidity + '%';
+            document.getElementById('wind-direction').textContent = weather.winddirection + '风';
+            document.getElementById('wind-power').textContent = weather.windpower + '级';
+            
+            // 更新时间显示
+            const reportTime = new Date(weather.reporttime);
+            const timeStr = reportTime.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('update-time').textContent = '更新时间: ' + timeStr;
+        }
+
+        // 初始化天气数据
+        fetchWeatherData();
+        // 每30分钟更新一次天气数据
+        setInterval(fetchWeatherData, 30 * 60 * 1000);
+
+        // 视图切换逻辑
+        function switchView(viewId) {
+            // 隐藏所有内容视图
+            const contentViews = document.querySelectorAll('.content-view');
+            contentViews.forEach(view => {
+                view.classList.remove('active');
+            });
+            
+            // 显示目标视图
+            const targetView = document.getElementById(`view-${viewId}`);
+            if (targetView) {
+                targetView.classList.add('active');
+            }
+
+            // 移除所有导航链接的active类
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // 为当前点击的导航链接添加active类
+            navLinks.forEach(link => {
+                const onclick = link.getAttribute('onclick');
+                if (onclick && onclick.includes(`'${viewId}'`)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // 初始化和事件绑定
+        document.addEventListener('DOMContentLoaded', function() {
+            // 绑定导航点击事件
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const onclick = this.getAttribute('onclick');
+                    if (onclick) {
+                        // 提取viewId
+                        const match = onclick.match(/switchView\('([^']+)'\)/);
+                        if (match) {
+                            switchView(match[1]);
+                        }
+                    }
+                });
+            });
+            
+            // 初始化显示首页
+            switchView('home');
+        });
+    </script>
+</body>
+</html>

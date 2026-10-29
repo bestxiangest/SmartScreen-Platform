@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_light_blue_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_orange_border_light_blue">
+
+        <!-- 页面标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_title"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/jiemianbiaoti"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_subtitle"
+                android:textSize="20sp"
+                android:textColor="@color/text_muted"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/jiemianxiaozi" />
+
+        </LinearLayout>
+
+        <!-- 主要内容区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <!-- 基地优秀项目成果轮播图 -->
+
+            <!-- 右侧区域：天气状况、重要通知和快速入口 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="2"
+                android:background="@drawable/bg_message_border_orange"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/excellent_projects"
+                        android:textColor="@color/text_primary"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/alimama" />
+
+                    <TextView
+                        android:id="@+id/carousel_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_project_card"
+                        android:paddingStart="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="1/5"
+                        android:textColor="@color/text_muted"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- 项目轮播图容器 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="4:3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <!-- 轮播图指示器 -->
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/projects_carousel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_project_card" />
+
+                        <LinearLayout
+                            android:id="@+id/dots_indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone" />
+
+                        <!-- 左右切换按钮 -->
+                        <ImageView
+                            android:id="@+id/btn_prev"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:alpha="0.8"
+                            android:background="@drawable/bg_project_card"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_chevron_left" />
+
+                        <ImageView
+                            android:id="@+id/btn_next"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            android:alpha="0.8"
+                            android:background="@drawable/bg_project_card"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_chevron_right" />
+
+                    </RelativeLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- 励志金句 -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- 天气状况 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="7"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_weather"
+                    android:padding="20dp"
+                    android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:id="@+id/weather_icon"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/clouday"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weather_location"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <!-- 第一行：温度和天气状况 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:id="@+id/temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="29°C"
+                        android:textSize="58sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:id="@+id/weather_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="阴"
+                        android:textSize="44sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center_vertical" />
+
+                </LinearLayout>
+
+                <!-- 第二行：湿度、风力、风向 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="1dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginEnd="12dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/humidity"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:id="@+id/humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="湿度: 62%"
+                            android:textSize="22sp"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginEnd="12dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/wind_direction"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:id="@+id/wind_direction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="风向: 南风"
+                            android:textSize="22sp"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/wind_power"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:id="@+id/wind_power"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="风力: ≤3级"
+                            android:textSize="22sp"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 第三行：报告时间 -->
+                <TextView
+                    android:id="@+id/update_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新时间: 17:03"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:alpha="0.85" />
+
+                </LinearLayout>
+
+                <!-- 重要通知 -->
+                <LinearLayout
+                    android:id="@+id/important_notices_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_message_border_orange"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- 通知项目 - 可滚动列表 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/important_notices"
+                        android:textColor="@color/text_primary"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="@font/alimama" />
+
+                    <!-- 加载动画布局 -->
+                    <LinearLayout
+                        android:id="@+id/home_notices_loading_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/home_notices_loading_progress"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:indeterminateTint="@color/primary_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="正在加载重要通知..."
+                            android:textSize="14sp"
+                            android:textColor="@color/text_muted"
+                            android:layout_marginTop="12dp" />
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:id="@+id/home_notices_scroll_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        android:fadeScrollbars="false"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/home_notices_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                    <!-- 通知1 - 实验室安全培训通知 -->
+                    <LinearLayout
+                        android:id="@+id/home_notice_item_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="实验室安全培训通知"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="请所有实验室成员于本周五下午参加安全培训。培训内容包括实验室安全规范、设备操作注意事项、紧急情况处理流程等。"
+                             android:textSize="13sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="3dp"
+                             android:maxLines="1"
+                             android:ellipsize="end" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="发布时间：2023-12-15 09:30"
+                             android:textSize="12sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="2dp"
+                             android:alpha="0.8" />
+
+                    </LinearLayout>
+
+                    <!-- 通知2 - 设备维护通知 -->
+                    <LinearLayout
+                        android:id="@+id/home_notice_item_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="设备维护通知"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="频谱分析仪将于明日进行例行维护，暂停使用。维护时间：明日上午9:00-下午5:00。维护期间请勿使用该设备。"
+                             android:textSize="13sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="3dp"
+                             android:maxLines="1"
+                             android:ellipsize="end" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="发布时间：2023-12-15 08:45"
+                             android:textSize="12sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="2dp"
+                             android:alpha="0.8" />
+
+                    </LinearLayout>
+
+                    <!-- 通知3 - 项目成果发布 -->
+                    <LinearLayout
+                        android:id="@+id/home_notice_item_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="项目成果发布"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="5G毫米波通信系统项目荣获全国一等奖。该项目历时两年，团队成员通过不懈努力，在毫米波天线设计、信号处理算法优化等关键技术方面取得重大突破。"
+                             android:textSize="13sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="3dp"
+                             android:maxLines="1"
+                             android:ellipsize="end" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="发布时间：2023-12-14 16:20"
+                             android:textSize="12sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="2dp"
+                             android:alpha="0.8" />
+
+                    </LinearLayout>
+
+                    <!-- 通知4 - 学术讲座通知 -->
+                    <LinearLayout
+                        android:id="@+id/home_notice_item_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="学术讲座通知"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="6G通信技术前沿发展趋势专题讲座。本次讲座将邀请业界知名专家，深入探讨6G技术的最新发展动态、关键技术突破以及未来应用场景。"
+                             android:textSize="13sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="3dp"
+                             android:maxLines="1"
+                             android:ellipsize="end" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="发布时间：2023-12-15 14:00"
+                             android:textSize="12sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="2dp"
+                             android:alpha="0.8" />
+
+                    </LinearLayout>
+
+                    <!-- 通知5 - 新设备到货通知 -->
+                    <LinearLayout
+                        android:id="@+id/home_notice_item_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="新设备到货通知"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="新一代FPGA开发板已到货，欢迎预约使用。本批设备为最新型号，具备更强的处理能力和更丰富的接口资源。"
+                             android:textSize="13sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="3dp"
+                             android:maxLines="1"
+                             android:ellipsize="end" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="发布时间：2023-12-13 10:15"
+                             android:textSize="12sp"
+                             android:textColor="@color/text_muted"
+                             android:layout_marginTop="2dp"
+                             android:alpha="0.8" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            </LinearLayout>
+
+                <!-- 快速入口 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_message_border_orange"
+                    android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quick_access"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/alimama" />
+
+                <!-- 快速入口按钮网格 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/btn_grade_search"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="12dp"
+                        android:gravity="center"
+                        android:layout_marginEnd="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/grade_search"
+                            android:layout_marginBottom="6dp"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/grade_search"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_scan_checkin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="12dp"
+                        android:gravity="center"
+                        android:layout_marginEnd="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/scan_qr"
+                            android:layout_marginBottom="6dp"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/scan_checkin"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_resource_center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="12dp"
+                        android:gravity="center"
+                        android:layout_marginEnd="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/resource_centre"
+                            android:layout_marginBottom="6dp"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/resource_center"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_emergency_help"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_project_card"
+                        android:padding="12dp"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/urgent_help"
+                            android:layout_marginBottom="6dp"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/emergency_help"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-6dp"
+            android:gravity="center"
+            android:text="科技创新无止境，青春奋斗正当时"
+            android:textColor="@color/text_muted"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

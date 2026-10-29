@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_light_blue_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 现代化顶部标题区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_orange_border_light_blue"
+            android:padding="32dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="8dp">
+
+            <!-- 主标题 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\t\t\t\t"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ai_logo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AI人才培养方案"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\t\t\t\t\t智能化个性定制 · 精准培养路径"
+                        android:layout_gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- 圆形微信小程序按钮 -->
+                <LinearLayout
+                    android:id="@+id/btn_wechat_miniprogram"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/bg_wechat_circle_button"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:elevation="6dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/little_app"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:text="微信小程序"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <!-- 功能特色标签 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✨ 智能分析"
+                    android:textSize="18sp"
+                    android:textColor="@color/blue_600"
+                    android:background="@drawable/bg_feature_tag_blue"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎯 个性定制"
+                    android:textSize="18sp"
+                    android:textColor="@color/orange_600"
+                    android:background="@drawable/bg_feature_tag_orange"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📱 移动优先"
+                    android:textSize="18sp"
+                    android:textColor="@color/green_600"
+                    android:background="@drawable/bg_feature_tag_green"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 现代化信息输入区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_orange_border_light_blue"
+            android:padding="24dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_form_fill"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快速信息填写"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+            </LinearLayout>
+
+            <!-- 现代化输入字段 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 姓名输入 -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxStrokeColor="@color/blue_500"
+                    app:hintTextColor="@color/blue_500"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name_modern"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="👤 请输入您的姓名"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- 年龄和学历并排 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:boxStrokeColor="@color/blue_500"
+                        app:hintTextColor="@color/blue_500"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_age_modern"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="🎂 年龄"
+                            android:inputType="number"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:boxStrokeColor="@color/blue_500"
+                        app:hintTextColor="@color/blue_500"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_education_modern"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="🎓 学历"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_primary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- 专业输入 -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxStrokeColor="@color/blue_500"
+                    app:hintTextColor="@color/blue_500"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_major_modern"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="📚 专业背景"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- 兴趣和目标 -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxStrokeColor="@color/blue_500"
+                    app:hintTextColor="@color/blue_500"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_interest_modern"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="🎯 兴趣方向 (如：机器学习、深度学习)"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/blue_500"
+                    app:hintTextColor="@color/blue_500"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_goal_modern"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="🚀 学习目标"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 现代化操作按钮区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <!-- 主要生成按钮 -->
+            <Button
+                android:id="@+id/btn_generate_plan_modern"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="方案生成"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_modern_primary_button"
+                android:elevation="6dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- 生成进度条 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="@drawable/bg_feature_tag_orange"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"
+                android:id="@+id/layout_progress_container">
+                
+                <ProgressBar
+                    android:id="@+id/progress_generation"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminate="true" />
+                    
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🤖 AI正在为您生成专属培养方案..."
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary"
+                    android:gravity="center" />
+                    
+            </LinearLayout>
+
+            <!-- 辅助操作按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_quick_fill"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="快速填写"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_modern_secondary_button"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btn_clear_form"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="清空表单"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_modern_tertiary_button"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 现代化方案展示区 -->
+        <LinearLayout
+            android:id="@+id/layout_plan_display_modern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_feature_tag_orange"
+            android:padding="24dp"
+            android:elevation="6dp"
+            android:visibility="gone">
+
+            <!-- 结果标题 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_success_check"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_plan_title"
+                    android:layout_height="wrap_content"
+                    android:text="您的专属AI培养方案"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+            </LinearLayout>
+
+            <!-- 方案内容展示 - 单列滚动布局 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <!-- 发展计划 Card -->
+                <include layout="@layout/item_cultivation_card"
+                    android:id="@+id/card_development_plan" />
+
+                <!-- 时间目标规划 Card -->
+                <include layout="@layout/item_cultivation_card"
+                    android:id="@+id/card_timeline_goals" />
+
+                <!-- 学习资源推荐 Card -->
+                <include layout="@layout/item_cultivation_card"
+                    android:id="@+id/card_learning_resources" />
+
+                <!-- 技能发展 Card -->
+                <include layout="@layout/item_cultivation_card"
+                    android:id="@+id/card_skill_development" />
+
+                <!-- 职业发展指导 Card -->
+                <include layout="@layout/item_cultivation_card"
+                    android:id="@+id/card_career_guidance" />
+
+                <!-- 个性化建议 Card -->
+                <include layout="@layout/item_cultivation_card"
+                    android:id="@+id/card_personalized_suggestions" />
+
+            </LinearLayout>
+            
+            <!-- 生成的图片展示区域 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_feature_tag_orange">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🎨 AI生成的培养方案图表"
+                        android:textSize="27sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center" />
+                        
+                    <ImageView
+                        android:id="@+id/iv_generated_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/bg_chart_placeholder"
+                        android:visibility="gone"
+                        android:minHeight="200dp"
+                        android:contentDescription="AI生成的培养方案图表" />
+                        
+                </LinearLayout>
+                
+            </androidx.cardview.widget.CardView>
+            
+            <!-- 隐藏的原始内容TextView，用于保存完整内容 -->
+            <TextView
+                android:id="@+id/tv_plan_content_modern"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+
+            <!-- 现代化操作按钮 -->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,349 @@
+<resources>
+    <string name="app_name">CampusScreen</string>
+    
+    <!-- 应用标题 -->
+    <string name="lab_title">通信电子创新基地</string>
+    
+    <!-- 导航菜单 -->
+    <string name="nav_home">基地动态</string>
+    <string name="nav_schedule">消息通知</string>
+    <string name="nav_equipment">设备中心</string>
+    <string name="nav_projects">项目展示</string>
+    <string name="nav_safety">安全须知</string>
+    <string name="nav_management">基地管理</string>
+    
+    <!-- 首页内容 -->
+    <string name="home_title">基地首页</string>
+    <string name="home_subtitle">欢迎来到通信电子创新基地，探索科技前沿。</string>
+    <string name="excellent_projects">基地优秀项目成果</string>
+    <string name="weather_location">南昌新建区</string>
+    <string name="important_notices">重要通知</string>
+    <string name="quick_access">快速入口</string>
+    
+    <!-- 消息通知 -->
+    <string name="schedule_title">消息通知</string>
+    <string name="schedule_subtitle">查看基地最新通知和重要消息。</string>
+    <string name="today_reservations">今日消息</string>
+    <string name="in_progress">未读</string>
+    <string name="pending">重要</string>
+    <string name="completed">已读</string>
+    <string name="today_schedule_details">消息详情</string>
+    
+    <!-- 设备中心 -->
+    <string name="equipment_title">设备中心</string>
+    <string name="equipment_subtitle">浏览实验室的所有高精尖设备。</string>
+    <string name="total_equipment">设备总数</string>
+    <string name="available_equipment">可用设备</string>
+    <string name="in_use">使用中</string>
+    <string name="maintenance">维护中</string>
+    <string name="measurement_instruments">测量仪器</string>
+    <string name="development_platforms">开发平台</string>
+    <string name="available">可用</string>
+    <string name="reserve">预约</string>
+    <string name="unavailable">不可用</string>
+    
+    <!-- 项目展示 -->
+    <string name="projects_title">项目展示</string>
+    <string name="projects_subtitle">见证从灵感到现实的非凡创造。</string>
+    <string name="total_projects">总项目数</string>
+    <string name="award_projects">获奖项目</string>
+    <string name="patent_applications">专利申请</string>
+    <string name="industrialization">产业化</string>
+    <string name="industrialized">产业化</string>
+    <string name="awarded_projects">获奖项目</string>
+    <string name="award_projects_section">🏆 获奖项目</string>
+    <string name="ongoing_projects">🔬 在研项目</string>
+    <string name="progress">进度</string>
+    
+    <!-- 安全须知 -->
+    <string name="safety_title">安全须知</string>
+    <string name="safety_subtitle">安全第一，规范操作，共创和谐实验环境。</string>
+    <string name="safe_operation_days">安全运行天数</string>
+    <string name="safety_days">安全运行天数</string>
+    <string name="safety_accidents">安全事故</string>
+    <string name="safety_training">安全培训人次</string>
+    <string name="safety_trainings">安全培训人次</string>
+    <string name="safety_inspections">安全检查次数</string>
+    <string name="emergency_drills">应急演练次数</string>
+    <string name="safety_compliance">安全合规率</string>
+    <string name="important_safety_reminder">重要安全提醒</string>
+    <string name="important_safety_reminders">重要安全提醒</string>
+    <string name="safety_reminder_1">新入职人员需通过安全培训，未获准入者禁止进入实验室</string>
+    <string name="safety_reminder_2">实验室内严禁饮食、吸烟、存放个人食品，避免误食中毒</string>
+    <string name="safety_reminder_3">实验结束后必须及时关闭所有电源，并检查确认无安全隐患</string>
+    <string name="safety_operation_standards">📋 安全操作规范</string>
+    <string name="electrical_safety">电气安全</string>
+    <string name="electrical_safety_rule_1">使用电气设备前检查线路完整性</string>
+    <string name="electrical_safety_rule_2">湿手禁止触摸电气开关</string>
+    <string name="electrical_safety_rule_3">发现电气故障立即断电报告</string>
+    <string name="electronic_safety">电子器件安全</string>
+    <string name="electronic_safety_rule_1">使用电子元器件前检查规格参数</string>
+    <string name="electronic_safety_rule_2">静电敏感器件需佩戴防静电手环</string>
+    <string name="electronic_safety_rule_3">焊接作业必须在通风良好环境下进行</string>
+    <string name="emergency_handling">🚑 应急处理</string>
+    <string name="emergency_procedures">应急处理程序</string>
+    <string name="fire_emergency">火灾应急</string>
+    <string name="fire_emergency_steps">1. 立即按下火警报警器\n2. 迅速撤离现场\n3. 拨打119报警\n4. 使用灭火器扑救初期火灾</string>
+    <string name="electric_shock_emergency">触电应急</string>
+    <string name="electric_shock_steps">1. 立即切断电源\n2. 使用绝缘物品移开电源\n3. 检查伤者意识和呼吸\n4. 立即拨打120急救</string>
+    <string name="equipment_malfunction_emergency">设备故障应急</string>
+    <string name="equipment_malfunction_steps">1. 立即停止设备运行\n2. 切断相关电源\n3. 记录故障现象\n4. 报告设备管理员</string>
+    <string name="emergency_contacts">紧急联系方式</string>
+    <string name="lab_manager">实验室主任</string>
+    <string name="safety_officer">安全员</string>
+    <string name="emergency_rescue">应急救援</string>
+    
+    <!-- 快速入口 -->
+    <string name="grade_search">成绩查询</string>
+    <string name="scan_checkin">扫码签到</string>
+    <string name="resource_center">资源中心</string>
+    <string name="emergency_help">紧急求助</string>
+    
+    <!-- 状态标签 -->
+    <string name="status_available">可用</string>
+    <string name="status_in_use">使用中</string>
+    <string name="status_maintenance">维护中</string>
+    <string name="status_in_progress">进行中</string>
+    <string name="status_pending">待开始</string>
+    <string name="status_completed">已完成</string>
+    
+    <!-- 天气信息 -->
+    <string name="humidity">湿度</string>
+    <string name="wind_direction">风向</string>
+    <string name="wind_power">风力</string>
+    <string name="update_time">更新时间</string>
+
+    <!-- 基地简介 -->
+    <string name="fragment_introduction1">通信电子创新基地（以下简称“基地”）于2007年6月份筹建，于2008年10月正式成立，隶属于华东交通大学信息与软件工程学院，获得教育部产学合
+作协同育人项目5项（ 华东交通大学信息与软件工程学院西普车联网联合实验室、
+新工科视域下的创业人才培养模式研究与探索与研究、智能制造与工业物联网实践及应用、华东交通大学信息学院粤嵌科技联合实验室、大学生电子通讯类实习实训）。基地是中国大学生iCAN创新创业实践教育基地、学校大学生创新创业实践基地和交大科技园培训基地挂牌单位，也是深圳市赣派科技有限公司大学生创客实践基地和江西联博科技有限公司人才培训基地。 </string>
+    <string name="fragment_introduction2">由于通信电子创新基地在创新实践过程中，取得显示成效并起着示范作用，
+2009 年底信息与软件工程学院成立了大学生创新基地，成立创新管理中心，截止2018年，信息学院大学生创新基地有11个子基地。从2009年起，通信电子
+创新基地承接全学院《认识实习》、《电子工艺实习》和《创新实践环节》等实习课程的动手实践环节，承接信息学院大学生创新基地硬件电路焊接基础培训工作。
+通信电子创新基地每年面向全校招收110余名学生（其中通信60名左右），
+每年从通信电子创新基地毕业学生大致40余名（其中通信20名左右）。从2017年开始，通信电子创新基地已辐射昌北高校招收学有余力的学生。通信电子创新基地以“学生为中心”、“产出导向”和“可持续改进”的工程教育理念，围绕着新工科建设路线为指导，探索具有交大特色的基于 TBL-CDIO（Team Based
+Learning-Conceive Design Implement Operate）创新创业人才培养模式，开展创新创业项目实训、以赛促练实训和创新工程实训等。 </string>
+    <string name="fragment_introduction3">经过十余年不懈努力，基地培养出了以袁超、赵林沛、黄绍伟、丁磊、叶世良、肖起华、任宝平、杨金飞、谢海洋、谢晓峰、刘华、陈顺明、文品、文忠友、
+高晓晖、余慧、钟玉芳、张明明、毛伟平、谢思源、屈伸伟、王涛、王志方、蒋双、高波、潘泽中、王冠琼、周彰平、邹耀华、杨高扬、黄国庆、徐航、龚建生、
+应婉月、刘凡、程金龙、黄健、刘志强、喻友文、蔡祥贵、申法超、林洪城、韦小慧、李振邦、徐剑、沈文波、牛耀甜、史少岩、万刚远、杨亚辉、李喆、钟鹏九、林伟龙、武星、雷发平、张世奇和张辉鹏等为代表的共计120余名优秀校友。 </string>
+    <string name="fragment_introduction4">通信电子创新基地导师黄德昌同志获得“2017 年江西省大学生创新创业优秀导师”称号（全省共十名），黄德昌同志获得“iCAN教育之星”荣誉称号；基地学生黄炳华获得“iCAN创新之星”荣誉称号。 </string>
+    <string name="fragment_introduction5">每年在通信电子创新基地学习的学生推免研究生4-5名。 </string>
+    <string name="achievement_exhibition">通信电子创新基地秉承教书育人理念，坚持实践教学为根基。截止2018年10月，基地学生在挑战杯、电子设计大赛、节能减排竞赛、计算机作品大赛、
+TI 物联网竞赛、软件服务外包大赛和iCAN创新创业大赛等极具挑战性竞赛中，
+斩获国家级奖项40余项、省级奖项90余项。基地学生在科技竞赛过程中尽显花椒学子的优秀品质及敢为人先的科学创新精神。此外，基地获批了国家发明专利5项、实用新型专利10余项和软件著作权4项。 </string>
+    <string name="training_mode">通信电子创新基地采用阶梯型学习模式，经过历届师生不断的学习、总结、
+反馈，基地逐渐形成了以基于 TBL-CDIO 的创新创业人才培养模式，基于
+TBL-OBE 的工程训练模式，建立了“授人以鱼、授人以渔、授人以欲、授人以寓”
+的育人理念；树立了“创业意识、创新思维、创业技能、管理能力、创业精神、
+工匠精神”的育人目标。通过实施基于TBL-CDIO的创新创业人才培养模式，提
+高了学生团队意识、沟通能力、专业水平和创新工程实践能力。  </string>
+    <string name="fragment_culture">通信电子创新基地历经近十年的探索与实践，以社会主义核心价值观为指导
+思想，以“弟子规”、“诫子书”、“少年中国说”和“道德经”等传统文化的精髓
+为育人基石，形成了以四个“yu”、“三个学会”、“三个加强”、“两个保持”和“一
+颗不忘的初心”为代表的通信电子创新基地特色文化。  </string>
+    <string name="fragment_culture_title1">（1） 四个“yu”的基地文化</string>
+    <string name="fragment_culture_title2">（2） 三个“加强”的基地文化</string>
+    <string name="fragment_culture_title3">（3） 三个“学会”的基地文化</string>
+    <string name="fragment_culture_title4">（4） 两个“保持”的基地文化</string>
+    <string name="fragment_culture_title5">（5） 一颗“不忘的初心”的基地文化</string>
+    <string name="fragment_culture_content_1_1">第一个yu“鱼”，授予学生知识，以《弟子规》为根本开展传统文化学习，培育
+学生的情商和逆商，坚毅与灵商，孝道与感恩；</string>
+    <string name="fragment_culture_content_1_2">第二个yu“渔”，授予学生方法，提升学生沟通能力、执行能力、管理能力、自
+学能力、创新工程动手实践能力、自理能力、团队意识和职业素养等；</string>
+    <string name="fragment_culture_content_1_3">第三个yu“欲”，培养学生源动力，由“要我学”转变为“我要学”升级为“我
+爱学”，充分提升学生为什么而读书的动力；</string>
+    <string name="fragment_culture_content_1_4">第四个yu“寓”，培养学生的大格局和小情怀，在日常生活、工作和学习中，感
+悟人生哲理，实现自我价值。</string>
+    <string name="fragment_culture_content_2">加强团队创新能力、加强实验室执行力、加强团队沟通能力；</string>
+    <string name="fragment_culture_content_3">学会为人处世、学会调整心态、学会如何自学；</string>
+    <string name="fragment_culture_content_4">保持激情、保持热情。</string>
+    <string name="fragment_culture_content_5">选择没有错和对，贵在坚持；不忘初心，方得始终。</string>
+
+    <!-- 项目详情界面 -->
+    <string name="project_detail_title">项目详情</string>
+    <string name="back_button_desc">返回</string>
+    <string name="share_button_desc">分享</string>
+    <string name="project_title_placeholder">项目标题</string>
+    <string name="award_level_placeholder">国家一等奖</string>
+    <string name="category_placeholder">科技创新类</string>
+    <string name="project_leader_label">项目负责人</string>
+    <string name="project_leader_placeholder">张三</string>
+    <string name="completion_date_label">完成时间</string>
+    <string name="completion_date_placeholder">2024年3月</string>
+    <string name="team_size_label">参与人数</string>
+    <string name="team_size_placeholder">5人</string>
+    <string name="supervisor_label">指导老师</string>
+    <string name="supervisor_placeholder">李教授</string>
+    <string name="project_introduction_title">项目简介</string>
+    <string name="project_introduction_placeholder">项目简介内容</string>
+    <string name="technical_features_title">技术特点</string>
+    <string name="technical_features_placeholder">技术特点内容</string>
+    <string name="application_value_title">应用价值</string>
+    <string name="application_value_placeholder">应用价值内容</string>
+    <string name="project_showcase_title">项目展示</string>
+    
+    <!-- 项目详情数据 -->
+    <string name="project_1_title">基于物联网技术的智慧蔬菜大棚监测系统</string>
+    <string name="project_1_description">本项目开发了一套基于深度学习技术的智能图像识别系统，采用卷积神经网络(CNN)架构，能够准确识别和分类各种图像内容。系统具有高精度、快速响应的特点，在多个应用场景中表现优异。</string>
+    <string name="project_1_technical_features">• 采用ResNet-50深度网络架构\n• 支持实时图像处理和识别\n• 识别准确率达到95%以上\n• 支持多种图像格式输入</string>
+    <string name="project_1_application_value">该系统可广泛应用于安防监控、医疗诊断、工业检测等领域，为相关行业提供智能化解决方案。</string>
+    <string name="project_1_award_level">国家一等奖</string>
+    <string name="project_1_category">科技创新类</string>
+    <string name="project_1_leader">张三</string>
+    <string name="project_1_team_size">5人</string>
+    <string name="project_1_completion_date">2024年3月</string>
+    <string name="project_1_supervisor">李教授</string>
+    
+    <string name="project_2_title">物联网边缘计算平台</string>
+    <string name="project_2_description">构建了一个高效的物联网边缘计算平台，通过在网络边缘部署计算资源，实现数据的就近处理和分析，大幅降低网络延迟，提高系统响应速度。</string>
+    <string name="project_2_technical_features">• 边缘设备管理和监控\n• 实时数据处理和分析\n• 智能任务调度和负载均衡\n• 安全的数据传输和存储</string>
+    <string name="project_2_application_value">随着5G和IoT技术的快速发展，边缘计算将成为未来智能化系统的重要基础设施。</string>
+
+    <!-- 人才培养界面 -->
+    <string name="cultivation_title">通信电子创新基地人才培养</string>
+    <string name="cultivation_goal_title">培养人才目标</string>
+    <string name="cultivation_goal_description">华东交通大学通信电子创新基地秉承“四个yu”文化为建设中心、充分发扬“三个学会”、“三个加强”、“两个保持”和“一颗不忘的初心”的基地精神，注重培养基地成员团队协作精神，锻炼基地成员的创造能力与创新思维，提升学生的综合素质和职业素养，通信电子创新基地人才培养计划有以下主要特色：\n1. 鲜明的创新工程应用型人才特色\n工程应用型人才培养是指在工程教育中侧重于工程技术与管理能力的培养,使学生具有工程综合能力,具有明确的工程观念,明晓工程的目的意义与过程,成为未来的工程实践中的技术负责人,或称为“实用型”工程师。该人才培养是以“工程项目”为基地建设核心，目的是希望学生领悟工程实践中需要具备的专业工程技能、同时具备项目管理能力和团队管理的能力，能够以实践作为立足的根本。\n2. 宽基础精技能型人才特色\n该培养计划采用由宽基础到精技能的培养过程的团队阶梯式建设方案，宽基础是基地应用型人才必须牢固地打下学科性广博知识的基础，其中包括本专业扎实的基础科学和基础理论知识，以及必要的人文、管理和社会科学知识；在具备扎实的专业学科基础和工程项目基础后，针对职业技能需求进行针对性培养，能使学生具备不同岗位的专业性技能和职业素养。\n3. 综合素质创新创业型人才特色\n秉承“四个yu文化”为建设中心、充分发扬“三个学会”、“三个加强”、“两个保持”、“一颗不忘的初心”、“链条文化”的基地精神。通过积极创造有利的外部教育条件以及整合资源,学生能够主动地将科学、道德、审美、劳动的等方面的文化成果内化为自身较为全面的素养,同时培养正确的职业素养，使综合能力获得提高，这种素质特征的主要方面应表现为:\n① 具有深厚的人文素质和中国传统文化修养；\n② 视野开阔,并富有开拓精神、工匠精神和创业精神；\n③ 具有工程素养，勇于面对实践，懂得真正富有挑战性的创造是来自实践；\n④ 具备组织跨学科“团队”作战的协作精神和团队管理能力。\n综上所示：通信电子创新基地人才培养目标是为了培养基地成员的综合实践能力，它涵盖了创新思维、创业意识、创业精神、创业技能、工匠精神、管理能力等实践能力。</string>
+    <string name="cultivation_direction_title">培养方向</string>
+    <string name="cultivation_direction_practice_title">职业技能与综合素养培养方向</string>
+    <string name="cultivation_direction_practice_description">依托通信工程、信息工程、自动化工程、软件工程、计算机科学与技术和物联网工程等专业培养方案，结合通信电子创新基地的项目实践，针对职业需求采取的深层次学习和训练如Web应用开发、Android应用开发、ARM嵌入式开发、集成电路开发，形成自身的职业导向。\n重才更重德，始终把思想道德素质培养放在首位，培养感恩心、事业心、责任感和吃苦奉献精神。形成正确的职业导向，在团队合作能力、团队管理能力、解决问题能力、表达沟通能力、创新创业意识等方面不断提高。主要表现为：\n① 较高的政治素质：对社会发展趋势的敏锐性，对国家宏观政策的预测能力及具有一定的政治理论修养；\n② 事业心和责任感：对基地管理、人员培训、项目实施做到勇于承担、积极主动、乐于奉献；\n③ 艰苦奋斗精神和务实作风：勤奋学习基础知识、踏实专研、有吃苦精神，摒弃眼高手低；\n④ 沉着解决问题的能力：善于在基地管理中和项目实施中发现问题，通过团队沟通妥善处理好问题；\n⑤ 组织管理能力：千头万绪、具体繁杂的工作中有条不紊，同时还具备一定的领导能力；\n⑥ 良好的表达沟通能力：包括口头表达能力、文字表达能力，团队项目实施的沟通能力、基地组织成员间的表达沟通能力等。</string>
+    <string name="cultivation_direction_theory_title">专业技能培养方向</string>
+    <string name="cultivation_direction_theory_description">华东交通大学通信电子创新基地成员主要来源是通信工程、信息工程、自动化工程、软件工程、计算机科学与技术和物联网工程等专业的学生，采用TBL-CDIO 的培养模式，将基于TBL-CDIO教学方法进行融合，实现了创新创业人才培养模式的三级项目实践教学体系紧密融合进三个专业本科教学的课程群中。\n① 一级创新训练项目构建\n通信电子创新基地隶属信息工程学院通信实验中心，基地实施导师制管理，从新生入学开始，加入基地的学生将选配专业教师担任整个四年的学习型导师，创新基地根据学生的特点、兴趣爱好、专业课程设置和未来就业创业规划等方面引导学生，让学生自行制定四年学习规划，制定长、中和短期学习目标，导师在学生的为人处事、职业道德、职业素养、职业生涯、工程技术和工程经验等方面给予指导。大学生科技竞赛是第一级TBL-CDIO创新训练项目的主要实施方式之一，大学生通过参加省部级、国家级大学生科技竞赛活动，能够很好地将知识运用于实践，在实践过程中不断地发现问题、分析问题和解决问题。\n② 二级系统训练项目构建\n依据通信工程、信息工程、自动化工程、软件工程、计算机科学与技术和物联网工程等专业课程形成几个核心课程群，如由物联网通信技术、STM32及嵌入式技术、无线传感器网络原理、数据采集和ZigBee技术及应用形成物联网工程的核心课程群；由C++语言程序设计、数据结构、数据库原理、PHP网页后台制作、计算机网络和软件工程形成计算机科学与技术的核心课程群；由现代通信原理、通信电子线路、射频技术、EDA技术及应用和计算机通信网形成通信工程的核心课程群。以相关核心课程群及专业就业能力要求为基础，构建第二级的TBL-CDIO 系统训练项目。\n③ 三级技能训练项目构建\n依据信息工程学院计算机科学与技术、物联网工程和通信工程等专业培养计划的理论基础课，结合创新基地的《protel画图》、《电路制作》和《Mutisim仿真》等基本技能课程组建专业基础课程群，根据专业基础课群构建第三级TBL-CDIO 技能训练项目，加深了学生对《单片机原理》、《C语言程序设计》、《protel 画图》和《电路制作》等课程的理解和技能的熟练。</string>
+    
+    <!-- 图片内容描述 -->
+    <string name="cultivation_goal_image_desc">培养目标图片</string>
+    <string name="cultivation_direction_theory_image_desc">理论研究方向图片</string>
+    <string name="cultivation_direction_practice_image_desc">实践应用方向图片</string>
+    <string name="project_2_award_level">省级二等奖</string>
+    <string name="project_2_category">物联网技术</string>
+    <string name="project_2_leader">李四</string>
+    <string name="project_2_team_size">4人</string>
+    <string name="project_2_completion_date">2024年2月</string>
+    <string name="project_2_supervisor">王教授</string>
+    
+    <string name="project_3_title">智能传感器网络监控系统</string>
+    <string name="project_3_description">基于区块链技术开发的供应链溯源系统，通过分布式账本技术确保供应链信息的透明性和不可篡改性，为消费者提供可信的产品溯源服务。</string>
+    <string name="project_3_technical_features">• 全链条信息记录和追踪\n• 智能合约自动执行\n• 多方参与的信任机制\n• 防伪验证和质量保证</string>
+    <string name="project_3_application_value">有效解决食品安全、药品监管等社会关注问题，提升消费者信心，促进诚信商业环境建设。</string>
+    <string name="project_3_award_level">市级一等奖</string>
+    <string name="project_3_category">区块链技术</string>
+    <string name="project_3_leader">王五</string>
+    <string name="project_3_team_size">6人</string>
+    <string name="project_3_completion_date">2024年1月</string>
+    <string name="project_3_supervisor">赵教授</string>
+    
+    <string name="project_4_title">5G网络优化算法研究</string>
+    <string name="project_4_description">针对5G网络的复杂性和高性能要求，研究开发了一套智能网络优化算法，能够动态调整网络参数，优化资源分配，提升网络性能和用户体验。</string>
+    <string name="project_4_technical_features">• 基于机器学习的网络预测模型\n• 动态资源分配优化算法\n• 网络切片技术应用\n• 边缘计算与5G融合</string>
+    <string name="project_4_application_value">为5G网络运营商提供智能化网络管理解决方案，推动5G技术在各行业的深度应用。</string>
+    <string name="project_4_award_level">国家二等奖</string>
+    <string name="project_4_category">通信技术</string>
+    <string name="project_4_leader">陈六</string>
+    <string name="project_4_team_size">7人</string>
+    <string name="project_4_completion_date">2023年12月</string>
+    <string name="project_4_supervisor">孙教授</string>
+    
+    <string name="project_5_title">人工智能辅助医疗诊断系统</string>
+    <string name="project_5_description">开发了基于人工智能技术的医疗辅助诊断系统，通过深度学习算法分析医学影像和临床数据，为医生提供准确的诊断建议和治疗方案推荐。</string>
+    <string name="project_5_technical_features">• 医学影像智能分析\n• 疾病风险评估\n• 个性化治疗方案推荐\n• 药物相互作用检测</string>
+    <string name="project_5_application_value">显著提高诊断效率和准确性，减轻医生工作负担，为偏远地区提供高质量医疗服务支持。</string>
+    <string name="project_5_award_level">省级一等奖</string>
+    <string name="project_5_category">医疗AI</string>
+    <string name="project_5_leader">刘七</string>
+    <string name="project_5_team_size">8人</string>
+    <string name="project_5_completion_date">2023年11月</string>
+    <string name="project_5_supervisor">周教授</string>
+    
+    <string name="project_6_title">智慧农业监测平台</string>
+    <string name="project_6_description">构建了综合性的智慧农业监测平台，集成物联网传感器、无人机遥感、气象监测等技术，实现农业生产的精准化、智能化管理。</string>
+    <string name="project_6_technical_features">• 土壤环境实时监测\n• 作物生长状态分析\n• 病虫害预警和防治\n• 智能灌溉控制\n• 产量预测和优化</string>
+    <string name="project_6_application_value">帮助农户提高产量20%以上，降低成本15%，实现农业可持续发展，推动乡村振兴战略实施。</string>
+    <string name="project_6_award_level">市级二等奖</string>
+    <string name="project_6_category">智慧农业</string>
+    <string name="project_6_leader">吴八</string>
+    <string name="project_6_team_size">5人</string>
+    <string name="project_6_completion_date">2023年10月</string>
+    <string name="project_6_supervisor">郑教授</string>
+    
+    <!-- 分享相关 -->
+    <string name="share_project_prefix">分享一个优秀项目：</string>
+    <string name="share_award_prefix">\n获奖情况：</string>
+    <string name="share_suffix">\n\n来自校园大屏系统</string>
+    <string name="share_subject">项目分享</string>
+    <string name="share_chooser_title">分享项目</string>
+    <string name="default_project_title">项目详情</string>
+    
+    <!-- 基地管理 -->
+    <string name="management_title">基地管理</string>
+    <string name="management_subtitle">管理实施办法</string>
+    
+    <!-- 基地管理板块标题 -->
+    <string name="management_team_title">基地管理团队与职能分配</string>
+    <string name="management_project_title">基地项目管理办法</string>
+    <string name="management_member_title">基地成员管理办法</string>
+    <string name="management_resource_title">基地资料与材料设备管理办法</string>
+    <string name="management_daily_title">基地日常事务管理办法</string>
+    
+    <!-- 基地管理板块详细内容 -->
+    <!-- 团队管理 -->
+    <string name="management_team_content">基地采用阶梯式团队管理模式，设主管职位，由大三基地成员担任，设助管职位，由大二基地成员担任，包括财务助管、文化助管、材料设备助管、项目助管、培训助管、日常事务助管。</string>
+    <string name="management_team_points">1. 主管\n统筹、管理、监督基地管理团队，负责基地管理团队建设，带领管理团队和其他基地成员进行专业技能学习、文化建设、学科竞赛、对外交流等基地活动。\n2. 财务助管\n负责基地财务收支及记录通信电子创新基金的收支情况，定期公开基地财务的收支情况，负责记录项目报销及材料报销等工作。\n3. 文化助管\n负责基地文化建设、基地新成员的基地人才培养建设方案、基地文化的对外宣传、微信推送、分享讲坛等工作。\n4. 材料设备助管\n负责基地元器件的分类管理、焊接室和实验室的设备管理、废旧物品材料的清理，基地材料及设备的借用登记等工作。\n5. 项目助管\n负责基地创新训练项目、比赛项目、产学合作项目的规划分配、时间安排、人员确定和项目跟踪，完成项目总结报告、项目结题。\n6. 培训助管\n负责基地成员的技术和文化等方面的培训，制定、完善基地培训计划，跟进基地成员培训成效等工作。\n7. 日常事务助管\n负责安排基地成员日常值班、基地常用物料的补充更新、基地成员安全监管等工作。</string>
+
+    <!-- 项目管理 -->
+    <string name="management_project_content">通信电子创新基地项目管理办法主要围绕基地创新训练项目、学科竞赛项目、产学合作项目以及其他基地项目（包括开放实验室、基础实训、创新工程实训）等进行展开，目的在于提升基地成员动手时间能力、项目管理、团队合作和沟通能力等，</string>
+    <string name="management_project_points">1. 基地创新训练项目、学科竞赛项目、产学合作项目的立项须由基地主任和基地管理团队共同研讨决定。\n2. 基地项目经费原则上为先由团队自行支付，项目结题后经财务助管和主管审核后予以报销。如有特殊情况可向财务助管和主管申请提前预支。\n3. 基地成员确定项目立项后，相关团队负责人须带领团队完成项目，否则将不予以报销处理，对团队中“拖后腿，不作为”的行为，队长应及时纠正，否则经项目助管和主管讨论决定做出处罚，严重者将做退出基地的处理。\n4. 项目助管有责任定期召开项目进度报告会，有责任督促项目成员完成项目。\n5. 对于负责相关项目团队表现优异或获得优秀成果的，经项目助管、财务助管和主管讨论决定后给予一定的奖励。\n6. 对于未完成或未结题的项目，项目助管有责任组织基地管理团队成员讨论决定项目是否继续开展。\n7. 项目助管在相关项目结题后，有责任要求团队负责人进行项目总结，整理项目资料和相关重要文件，由项目助管对相关项目在基地资料库进行资料备份。\n8. 对已结题的项目实物要定期整理和维护，以便领导参观或进一步更新。\n9. 严禁未经基地管理团队允许，私自对外公开基地项目资料或其它重要文件，造成严重后果者将做退出基地处理。\n10. 未经基地主任和基地管理团队的允许，严禁利用基地项目进行任何商业活动，造成严重后果的做退出基地处理，情节特别严重的将移送公安机关。</string>
+    
+    <!-- 成员管理 -->
+    <string name="management_member_content">依据基地成员培养目标和基地成员培养方向，基地成员管理办法规范基地成员在日常学习、日常生活、项目实训、团队管理、文化建设等方面的行为，基地管理流程图如左图所示，围绕基地成员在基地的培养要求中展开。</string>
+    <string name="management_member_points">1. 基地招新须制定相应的初期考核方案，考核通过者才能加入基地。\n2. 基地管理团队应定期制定并完善基地成员基地技术和基地文化的考核方案，并定期对基地成员进行考核，考核不通过者，做退出基地处理。\n3. 基地成员有责任定期学习基地文化。\n4. 基地成员需服从基地管理团队的安排，如有异议可向基地主任反映情况。\n5. 基地有责任参与基地组织的各类培训活动，参与各类培训活动的次数纳入基地成员考核内容中，考核不通过者，做退出基地处理。\n6. 基地成员有责任维护基地的集体荣誉和集体财产安全。\n7. 基地成员有责任对基地资料进行整理和保密。\n8. 基地成员有责任定期完成周历和学习汇报。\n9. 基地成员有责任定期整理自身的学习笔记和相关重要资料，经项目助管同意，提交给项目助管进行资料存档。\n10. 基地成员有责任对内、对外树立基地成员良好形象。\n11. 重要会议如不能按时参加，须提前向相关负责人请假并说明理由。</string>
+    
+    <!-- 资料设备管理 -->
+    <string name="management_resource_content">基地资料与材料设备管理包括元器件库、硬件设备、基地资料文件库、基地成员及校友通信录、书籍文献、日常物料等，须由材料主管和基地每一位成员共同管理和维护.</string>
+    <string name="management_resource_points">1. 基地材料设备助管负责安排并监督基地成员定期进行基地重要资料的整理，定期进行材料设备的整理、维护和更新。\n2. 基地材料设备助管定期对基地资料库进行整理更新，完善更新基地元器件表，对基地贵重材料设备进行登记。\n3. 基地成员或非基地成员需要借取基地材料设备的，须经过基地材料设备助管同意。\n4. 基地成员有责任对基地重要资料进行保密。\n5. 基地材料设备助管应定期更新基地材料设备，对于陈旧材料应及时处理。\n6. 基地材料设备助管应完成每个季度的基地资料和材料设备的整理和汇报工作。\n7. 基地资料与材料设备属于基地公共财产，基地成员都有责任进行保护。</string>
+    
+    <!-- 日常事务管理 -->
+    <string name="management_daily_content">为营造良好的学习环境和基地日常事务的有序进行，拟定基地日常事务管理办法，如左图所示。基地日常事务包括日常值班、基地卫生、会议安排、基地安全监督、活动安排、成员考核等。</string>
+    <string name="management_daily_points">1. 基地日常事务助管有责任制定基地日常值班表。\n2. 基地成员应自觉保持基地良好的学习环境，不得在基地大声喧哗，未经基地管理团队允许，不得在基地进行非学习性活动。\n3. 基地值班人员有责任对基地进行日常卫生打扫，物料补充等工作。\n4. 基地成员有责任完成日常事务助管安排的任务。\n5. 基地成员有责任做好保护基地财产安全，用电安全等工作。\n6. 基地日常事务助管有责任安排好领导视察，协助基地文化助管进行基地开放宣传等工作。\n7. 基地日常事务助管有责任做好每天的考勤登记和周期性的考勤考核安排，对不合格者视情节轻重予以警告或退出实验室处理。\n8. 基地成员离开基地时，须做到关闭电源、关好门窗、整理好各自物品、打扫好基地卫生和个人桌面卫生。\n9. 有特殊安排时须听从日常生活助管的调配。\n10. 基地成员养成写文档行为习惯，将项目管理、基地日常管理和竞赛管理等创新创业活动行为进行总结归纳，形成文档传承给学弟学妹</string>
+
+    <!-- 基地文化界面字符串 -->
+    <string name="culture_title">基地文化</string>
+    <string name="culture_subtitle">传承创新精神，塑造文化品格</string>
+    
+    <!-- 文化主题卡片标题 -->
+    <string name="culture_theme_1_title">不忘初心，砥砺前行</string>
+    <string name="culture_theme_2_title">实验室的道与术</string>
+    <string name="culture_theme_3_title">四个"YU"之道</string>
+    <string name="culture_theme_4_title">三学三加两保持一初心</string>
+    <string name="culture_theme_5_title">链条文化</string>
+    
+    <!-- 文化主题卡片内容 -->
+    <string name="culture_theme_1_content">白云苍狗，沧海桑田，世事变化无穷。坚守自己的最初信念，并把自己磨练成一把利剑向前奋进前行，即不放弃自己的最初想法，努力奋斗。\n通信电子创新基地的初心是面向全校招收学有余力的学生，开展信息技术技能的培训，组织和指导成员参加如“挑战杯”、“TI杯物联网大赛”、“互联网+”、“iCAN国际创新创业大赛”和“创青春”等创新创业科技竞赛，营造轻松开放的学习氛围。基地的所有教学资源面向全体基地师生全天候开放；学生自主管理；学生可自愿申请加入，自主选择培训内容，自拟创新项目，自愿组队参赛。采用阶梯型学习模式，由基础逐渐深入，建立循序渐进的创新创业能力培养模式。\n主要是以工程实训→项目培训→自主创新为结构的创新能力培养模式和以创业课程→工程实训→学科竞赛→创新项目→创业竞赛→成立公司为结构的创业能力培养模式为主。\n基地成员的初心是激发学生的创新意识，增强团队成员之间的合作精神，促进教学学风建设。全体成员以教学相长为主要思想，以“传”，“帮”，“带”为文化传承，如导师之于校友，导师之于在校学生，学长学姐之于学弟学妹，实行“一对多”的人才培养方式或“一对一”的精英培养方式，以项目为驱动加深对技术的理解，以专业技术为导向参加各类学科竞赛，达到提高学生创新精神，培养学生竞争意识的目的。</string>
+    <string name="culture_theme_2_content">道是眼光，是大局观，是自然运行的规律，也是人修身养性之本；术是手脚，是实践论，是战术，是人日常做事的自然。\n道统领术，术服务于道，道为术之灵，术为道之体；以道统术，以术得道。基地文化秉承“育学、育人、育才”的发展理念，以《弟子规》、《少年中国说》、《诫子书》、《百孝经》等中华传统文化为基础，四个“yu”文化为核心，“三个加强，三个学会，两个保持，一颗不忘的初心”为重点作为基地“道”文化的建设。\n以培养出“有高度、有格局、有思路”的新工科创新创业新型人才。道需坚守，术需创新。实验室的术是通过基于“TBL-CDIO”的教学方法对基地成员进行系统的创新创业能力培养，大一成员入门基本以“C语言”教学为基础，进行后期的学习准备，接着以兴趣为依托，成员可自由选择“硬件方向”或“软件方向”，最后以日后职业发展为导向，成员在软件、硬件方法可选择某一方向继续深度学习，软件方向如网页前端，安卓等，硬件方向例如ZigBee，CC3200等，术的学习不能过于死板，需要始终紧跟时代前沿，不断更新，不断创新，最忌讳闭门造车，不了解市场需求，单凭自我臆想开发产品，注定被市场淘汰。\n因此要善于利用最新的资源，如最新的NB-IoT（窄带物联网）和5G通信技术，以完成具有新意的产品，以求日后无论是以此参与竞赛，亦或以此作为日后创新创业方向，能取得较好成绩。</string>
+    <string name="culture_theme_3_content">第一个“鱼”：给予学生资源，传授知识，对基地成员进行软件和硬件方面的培训，让基地成员学习以《弟子规》为核心的中华优秀传统文化。如“朝起早，夜眠迟。老易至，惜此时。”中所提到，奉劝青少年要懂得珍惜时光，抓紧时间去学习，在时间的缝隙中不断拼搏。“事勿忙，忙多错。勿畏难，勿轻略。”则点出做事的基本法则：不慌不忙，我难人难不畏难，我易人易不大意。“读书法，有三到。心眼口，信皆要。”则教会成员读书时需要心到、眼到和口到。以中国传统文化为基石，传授为人处事的方法，培养学生的情商、逆商、灵商与坚毅。\n第二个“渔”：授予基地成员学习方法、思维方式、管理方法、沟通能力、实践能力、职业素养等能力提升的工具或技能。对于学生来说，仅仅授予学习的资源是远远不够的，如古代寓言，两个饥饿之人一人选择鱼竿一人选择鱼，最终两人皆饿死。原因在于拿鱼之人，在食用完鱼之后，无法再获得生活来源；而选择鱼竿者无法解燃眉之急，未能等鱼上钩就饿死了。所以唯有将两者结合起来，才能得以生存。由此可知，大学中所传授的不应当仅仅只是知识，同时也应当传授思考问题时的逻辑思路和学习的方法技巧。\n第三个“欲”：培养学生学习过程中的原动力，激发出学生学习的欲望，由“要我学”转变为“我要学”再到“我爱学”，最后提升成“为什么而学习”，例如周恩来总理的“为中华之崛起而读书”。当深入学习一门技术时，有“欲”之人遇到的困难与得到的赞许会不断地激发起学生的学习兴趣，从而将兴趣所在转换成目标所在。兴趣是最好的老师，如何激发出学生的学习兴趣正是实验室目前在探寻的问题。兴趣是求知的起点，是学生学习和创造的动力之源，是成功的催化剂。\n第四个“寓”：感悟人生，培养学生的格局与情怀，在平常学习生活中感悟人生道理，在平常生活中悟性修行。一个人的眼界决定了他未来的“高度”、“格局”与“思路”。只专注于自己的一亩三分地的人，永远无法想象人的潜能究竟有多大。生活就像一场修行，有些人能在人生中不断参悟，总结出自己未来的方向。有些人则在成功面前洋洋自得，在失败面前一蹶不振，不思进取。人与人之间的一念之差，会导致结局的千差万别。\n“鱼”、“渔”、“欲”、“寓”的四个“yu”文化是基地文化不可或缺的部分。开始时传授知识经验；紧接着授予技能，锻炼学生的能力；然后培养学生学习的兴趣与源动力，上升到从思想层面上的高度重视，注重培养学生树立终身学习目标；最后，形成对学生“高度”与“格局”的培养；感悟人生，生活修行。</string>
+    <string name="culture_theme_4_content">“三个学会”\n学会为人处世\n学会调整心态\n学会如何自学</string>
+    <string name="culture_theme_4_content_2">从古今中外为人处世方面成功与失败的生动事例中，可以看出做事先做人、做人要方圆、中庸需诚信等具有的重要意义。做事先做人，学会为人处世对每个学子的发展十分重要。在人的发展过程中，难免会遇到各种挫折，这就需要学生善于调整自己的心态。“态”，心字上面大一点，寓意着要有更大一点的心态观，要求学生具备积极乐观的人生态度与大心态观。自主学习能培养学生主动发展的能力，在传统的教学方式中，学生是教育的对象，其发展是被动的，对发展目标、发展目的和发展方向没有底。学生只是栓着绳索的羊，教师牵到哪，学生就跟到哪。在这种情况下，“教”与“学”无法有效结合，削弱了教育力量。“自主学习”强调学生是学习的主导者，学生自主安排学习内容、学习方式、学习目标，对整个学习过程做到了然于心。</string>
+    <string name="culture_theme_4_content_3">“三个加强”\n加强团队沟通能力\n加强团队创新能力\n加强实验室执行力</string>
+    <string name="culture_theme_4_content_4">沟通永远是每个大学生最需要具备的能力，不管是在工作学习还是日常生活中，良好的沟通都至关重要。思维的碰撞激发创新能力，而创新对于工科专业的学习至关重要，不管是普通的学习过程，还是参加比赛，创新能力都应该成为必要项；对个人而言执行力就是办事能力，对团队而言执行力就是战斗力，执行力要成为一种强势，必须要把握执行制胜的二十四字真经：认同文化、统一观念、明确目标、细化方案、强化执行和严格考核。</string>
+    <string name="culture_theme_4_content_5">“两个保持”\n保持激情\n保持热情</string>
+    <string name="culture_theme_4_content_6">如果没有激情，生命就暗淡无光。拥有激情，会让你坚韧无比，不轻言放弃。如果想成就大业，就必须保持激情和热情。无论从事什么工作，要想做好，激情都是必要的。激情是一种调动人体每个细胞活跃的决定因素，具有激情的人，将获得无穷的想象力和创造力。激情也最容易使我们在平凡中创造奇迹，不论我们是做什么，心中都应该燃烧起一股激情，让它作为一种不断鞭策我们前进的强大动力。命运从来不会偏袒那些做事半途而废、犹豫不决、缺乏激情的人。成功就在前方，看你是否有激情去奋斗，只有那些具有激情，勇于进取的人才能脱颖而出。但我们也要明白激情只是一种触动，不能说是光有激情，你就具备了创业和成功的条件，更需要99%的汗水。假如您已经符合了创业标准，请带着激情上路，开始您斗志昂扬的拼搏之路。</string>
+    <string name="culture_theme_4_content_7">“一颗不忘的初心”</string>
+    <string name="culture_theme_4_content_8">选择没有错和对，贵在坚持；不忘初心，方得始终，围绕着通信电子创新基地人才培养目标，为成为华东交大杰出校友而努力奋斗！</string>
+    <string name="culture_theme_5_content">成为销钉\n连成链条</string>
+    <string name="culture_theme_5_content_2">什么是链条，链条是由一个个环节与销钉组成的链子。通信电子创新基地的成员组成链条的一个个销钉，只有每一个销钉紧密的连接在起， 实验室才有不断前行的动力。销钉不仅可以连接两个环节，还能连接其它环节，这样又形成了新的链条，各条链条相互连在一起，最终形成了一个致密的网络。\n“链条”就是传承接力实验室成员之间的情感联络，它是实验室能发展运转的动力所在，是实验室优秀精神品质赓续的命脉。每一位实验室成员不仅仅要从前辈那取得养分，还要将收获的果实传递下去，只有这样，实验室才能经久不衰，才能保持辉炮的面貌。</string>
+
+    <!-- 基金使用暂行管理办法 -->
+    <string name="management_fund_usage_title">基金使用暂行管理办法</string>
+    <string name="management_fund_usage_content">通信电子创新基金是基地发展的重要保障，为规范基金使用，确保资金合理配置，特制定本管理办法。</string>
+    <string name="management_fund_usage_points">1. 经费来源\n① 产学合作研究项目中对方提供的研究经费；\n② 用人单位捐助资金；\n③ 基地校友捐助资金。\n\n2. 通信电子创新基地基金委员会成员介绍\n该基金会由通信电子创新基地基金委员会管理，基金委员会下设办公室。第一届基金委员会主任是2006级信息工程校友黄绍伟；第一届基金委员会副主任是2007级通信工程校友任宝平、2007级通信工程校友谢海洋、2007级通信工程校友杨金飞、2008级通信工程校友高晓珲、2010级通信工程校友杨高扬、2011级通信工程校友刘凡；第一届基金委员会成员黄德昌、黄绍伟、任宝平、谢海洋、杨金飞、文品、文忠友、高晓珲、潘泽中、邹耀华、杨高杨、黄国庆、刘凡、蔡祥贵、李振邦、沈文波、史少岩、万钢远、杨亚辉、林伟龙、黄炳华、李小俊、胡天生共22人。\n\n3. 通信电子创新基地基金委员会职责\n① 聘请校外导师到校，做学术报告、指导学生竞赛、指导学生创新创业等。\n② 管理基金用途，主要围绕着通信电子创新基地发展进行经费使用。</string>
+    
+    <!-- 校外导师暂行管理办法 -->
+    <string name="management_external_mentor_title">校外导师暂行管理办法</string>
+    <string name="management_external_mentor_content">为加强校企合作，引入行业专家资源，提升基地成员实践能力和就业竞争力，特制定校外导师管理办法。\n校外导师由历届校友组成，建立校外导师机制的目的在于针对在校基地成员在技术提升、职业导向、社会交际沟通等方面给予更多的帮助和指导。主要包括以下内容。</string>
+    <string name="management_external_mentor_points">1. 每年邀请校外导师返校做主题报告，邀请校外导师参与分享讲坛，分享经验。\n2. 邀请校内学生参加所在地大学暑期活动进行参观学习。\n3. 周期性邀请校外导师进行线上或返校技术培训与管理培训。\n4. 校外导师对每年基地的实训项目进行指导。\n5. 形成历届校友联系信息表，表内信息仅对基地成员公开，方便校友间的联系。\n6. 在校基地成员周期性将问题反馈为信息表，校外导师针对反馈的问题信息予以帮助解决。</string>
+    <string name="culture_theme_3_additional">四“YU”文化\n授人以鱼：给予资源，传授知识\n授人以渔：授予方法，培养能力\n授人以欲：激发欲望，培养动力\n授人以寓：感悟人生，培养格局</string>
+    
+
+    
+    <!-- 图片占位文字 -->
+    <string name="placeholder_image_text">待添加图片</string>
+
+</resources>

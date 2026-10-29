@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_light_blue_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_orange_border_light_blue">
+
+        <!-- 页面标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="基地介绍"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/jiemianbiaoti"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="深入了解通信电子创新基地，探索创新发展之路"
+                android:textSize="20sp"
+                android:textColor="@color/text_muted"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/jiemianxiaozi" />
+
+        </LinearLayout>
+
+        <!-- 五个功能按钮容器 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <!-- 基地简介按钮 -->
+            <LinearLayout
+                android:id="@+id/btn_base_brief"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_feature_tag_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="24dp"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="73dp"
+                    android:layout_height="73dp"
+                    android:layout_marginEnd="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/brief_introduction" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="基地简介"
+                        android:textColor="@color/base_intro_title"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.02" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="了解基地概况、发展历程和组织架构"
+                        android:textColor="@color/base_intro_secondary"
+                        android:textSize="16sp"
+                        android:alpha="0.85" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="→"
+                    android:textColor="@color/primary_color"
+                    android:textSize="31sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- 基地文化按钮 -->
+            <LinearLayout
+                android:id="@+id/btn_base_culture"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_feature_tag_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="24dp"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="73dp"
+                    android:layout_height="73dp"
+                    android:layout_marginEnd="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jd_culture" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="基地文化"
+                        android:textColor="@color/base_intro_title"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.02" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="了解基地文化理念、传统传承和精神内涵"
+                        android:textColor="@color/base_intro_secondary"
+                        android:textSize="16sp"
+                        android:alpha="0.85" />
+
+                </LinearLayout>
+
+                <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:text="→"
+                     android:textColor="@color/base_intro_tech_blue"
+                     android:textSize="31sp"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- 基地管理按钮 -->
+            <LinearLayout
+                android:id="@+id/btn_base_management"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_feature_tag_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="24dp"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="73dp"
+                    android:layout_height="73dp"
+                    android:layout_marginEnd="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jd_guanli" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="基地管理"
+                        android:textColor="@color/base_intro_title"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.02" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="查看基地管理制度、规章办法和运营规范"
+                        android:textColor="@color/base_intro_secondary"
+                        android:textSize="16sp"
+                        android:alpha="0.85" />
+
+                </LinearLayout>
+
+                <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:text="→"
+                     android:textColor="@color/base_intro_tech_blue"
+                     android:textSize="31sp"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- 人才培养按钮 -->
+            <LinearLayout
+                android:id="@+id/btn_base_cultivation"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_feature_tag_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="24dp"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="73dp"
+                    android:layout_height="73dp"
+                    android:layout_marginEnd="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jd_peiyang" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人才培养"
+                        android:textColor="@color/base_intro_title"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.02" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="了解基地人才培养体系、教学方案和成果展示"
+                        android:textColor="@color/base_intro_secondary"
+                        android:textSize="16sp"
+                        android:alpha="0.85" />
+
+                </LinearLayout>
+
+                <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:text="→"
+                     android:textColor="@color/base_intro_tech_blue"
+                     android:textSize="31sp"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- 基地基金委员会管理办法按钮 -->
+            <LinearLayout
+                android:id="@+id/btn_base_fund_management"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/bg_feature_tag_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="24dp"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="73dp"
+                    android:layout_height="73dp"
+                    android:layout_marginEnd="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jd_jijin" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="基地基金委员会管理办法"
+                        android:textColor="@color/base_intro_title"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.02" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="了解基地基金管理制度和校外导师管理办法"
+                        android:textColor="@color/base_intro_secondary"
+                        android:textSize="16sp"
+                        android:alpha="0.85" />
+
+                </LinearLayout>
+
+                <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:text="→"
+                     android:textColor="@color/base_intro_tech_blue"
+                     android:textSize="31sp"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 底部装饰 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

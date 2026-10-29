@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 基地管理相关样式 -->
+    
+    <!-- Material Design 3 管理界面主题 -->
+    <style name="Theme.Management" parent="Theme.Material3.DayNight">
+        <!-- 主色调 -->
+        <item name="colorPrimary">@color/management_primary</item>
+        <item name="colorPrimaryVariant">@color/management_primary_variant</item>
+        <item name="colorOnPrimary">@color/management_on_primary</item>
+        
+        <!-- 次色调 -->
+        <item name="colorSecondary">@color/management_secondary</item>
+        <item name="colorSecondaryVariant">@color/management_secondary_variant</item>
+        <item name="colorOnSecondary">@color/management_on_secondary</item>
+        
+        <!-- 背景色 -->
+        <item name="colorSurface">@color/management_surface</item>
+        <item name="colorOnSurface">@color/management_on_surface</item>
+        <item name="android:colorBackground">@color/management_background</item>
+        <item name="colorOnBackground">@color/management_on_background</item>
+        
+        <!-- 错误色 -->
+        <item name="colorError">@color/management_error</item>
+        <item name="colorOnError">@color/management_on_error</item>
+    </style>
+    
+    <!-- Material Design 3 管理卡片样式 -->
+    <style name="ManagementCardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardBackgroundColor">@color/management_card_surface</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">@drawable/ripple_card_effect</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    
+    <!-- Material Design 3 管理标题样式 -->
+    <style name="ManagementTitleStyle">
+        <item name="android:textColor">@color/management_title_primary</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/jiemianbiaoti</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    
+    <!-- Material Design 3 管理内容样式 -->
+    <style name="ManagementContentStyle">
+        <item name="android:textColor">@color/management_text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="android:fontFamily">@font/jiemianxiaozi</item>
+        <item name="android:alpha">0.87</item>
+    </style>
+    
+    <!-- Material Design 3 管理副内容样式 -->
+    <style name="ManagementSecondaryTextStyle">
+        <item name="android:textColor">@color/management_text_secondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+        <item name="android:fontFamily">@font/jiemianxiaozi</item>
+        <item name="android:alpha">0.87</item>
+    </style>
+    
+    <!-- 页面标题样式 -->
+    <style name="ManagementPageTitleStyle">
+        <item name="android:textColor">@color/management_title_primary</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/jiemianbiaoti</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:alpha">0.95</item>
+    </style>
+    
+    <!-- 页面副标题样式 -->
+    <style name="ManagementPageSubtitleStyle">
+        <item name="android:textColor">@color/management_text_muted</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/jiemianxiaozi</item>
+        <item name="android:alpha">0.75</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    
+    <!-- 图片占位文字样式 -->
+    <style name="PlaceholderTextStyle">
+        <item name="android:textColor">@color/management_on_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:alpha">0.8</item>
+    </style>
+    
+</resources>

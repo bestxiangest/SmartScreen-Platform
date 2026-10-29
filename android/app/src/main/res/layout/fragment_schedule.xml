@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_light_blue_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 页面标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/schedule_title"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/jiemianbiaoti"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/schedule_subtitle"
+                android:textSize="20sp"
+                android:textColor="@color/text_muted"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/jiemianxiaozi" />
+
+        </LinearLayout>
+
+        <!-- 消息统计概览 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <!-- 今日消息 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/bg_stats_card_blue"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:id="@+id/today_message_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/today_reservations"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:alpha="0.9" />
+
+            </LinearLayout>
+
+            <!-- 重要消息 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/bg_stats_card_orange"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:id="@+id/important_message_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pending"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:alpha="0.9" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!-- 消息列表 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_orange_border_light_blue"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today_schedule_details"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 加载动画布局 -->
+            <LinearLayout
+                android:id="@+id/loading_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/loading_progress"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:indeterminateTint="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在加载消息..."
+                    android:textSize="16sp"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginTop="16dp" />
+
+            </LinearLayout>
+
+            <!-- 消息项目列表 -->
+            <LinearLayout
+                android:id="@+id/messages_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- 消息1 - 重要通知 -->
+                <LinearLayout
+                    android:id="@+id/message_item_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_message_border_orange"
+                    android:padding="32dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- 消息头部（收缩状态显示） -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        
+                        <!-- 标签区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            
+                            <!-- 今日消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_today_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_blue"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 重要消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_important_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="重要消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_orange"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 消息类型标签 -->
+                            <TextView
+                                android:id="@+id/tag_type_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="安全培训"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_green"
+                                android:padding="6dp" />
+                                
+                        </LinearLayout>
+                        
+                        <!-- 消息内容区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- 消息标题 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/title_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="实验室安全培训通知"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/time_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2023-12-15 09:30"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_muted"
+                                android:layout_marginTop="4dp" />
+
+                        </LinearLayout>
+
+                            <!-- 展开/收起按钮 -->
+                            <Button
+                                android:id="@+id/btn_expand_1"
+                                android:layout_width="120dp"
+                                android:layout_height="36dp"
+                                android:text="展开详细内容"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_blue"
+                                android:background="@android:color/transparent"
+                                android:padding="4dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp" />
+
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                    <!-- 消息详细内容（展开状态显示） -->
+                    <LinearLayout
+                        android:id="@+id/message_detail_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/content_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="请所有实验室成员于本周五下午参加安全培训。培训内容包括实验室安全规范、设备操作注意事项、紧急情况处理流程等。培训地点：实验楼A301，时间：本周五14:00-16:00。请务必准时参加，培训结束后将进行考核。"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_muted"
+                            android:lineSpacingExtra="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 消息2 - 设备维护通知 -->
+                <LinearLayout
+                    android:id="@+id/message_item_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_message_border_blue"
+                    android:padding="32dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- 消息头部（收缩状态显示） -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        
+                        <!-- 标签区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            
+                            <!-- 今日消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_today_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_blue"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 重要消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_important_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="重要消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_orange"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 消息类型标签 -->
+                            <TextView
+                                android:id="@+id/tag_type_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="设备维护"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_green"
+                                android:padding="6dp" />
+                                
+                        </LinearLayout>
+                        
+                        <!-- 消息内容区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- 消息标题 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/title_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="设备维护通知"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/time_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2023-12-15 08:45"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_muted"
+                                android:layout_marginTop="4dp" />
+
+                        </LinearLayout>
+
+                            <!-- 展开/收起按钮 -->
+                            <Button
+                                android:id="@+id/btn_expand_2"
+                                android:layout_width="120dp"
+                                android:layout_height="36dp"
+                                android:text="展开详细内容"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_blue"
+                                android:background="@android:color/transparent"
+                                android:padding="4dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp" />
+
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                    <!-- 消息详细内容（展开状态显示） -->
+                    <LinearLayout
+                        android:id="@+id/message_detail_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/content_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="频谱分析仪将于明日进行例行维护，暂停使用。维护时间：明日上午9:00-下午5:00。维护期间请勿使用该设备，如有紧急需求请联系设备管理员。维护完成后将第一时间通知大家恢复使用。"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_muted"
+                            android:lineSpacingExtra="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 消息3 - 项目成果发布 -->
+                <LinearLayout
+                    android:id="@+id/message_item_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_message_border_orange"
+                    android:padding="32dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- 消息头部（收缩状态显示） -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        
+                        <!-- 标签区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            
+                            <!-- 今日消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_today_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_blue"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 重要消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_important_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="重要消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_orange"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 消息类型标签 -->
+                            <TextView
+                                android:id="@+id/tag_type_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="项目成果"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_green"
+                                android:padding="6dp" />
+                                
+                        </LinearLayout>
+                        
+                        <!-- 消息内容区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- 消息标题 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/title_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="项目成果发布"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/time_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2023-12-14 16:20"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_muted"
+                                android:layout_marginTop="4dp" />
+
+                        </LinearLayout>
+
+                            <!-- 展开/收起按钮 -->
+                            <Button
+                                android:id="@+id/btn_expand_3"
+                                android:layout_width="120dp"
+                                android:layout_height="36dp"
+                                android:text="展开详细内容"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_blue"
+                                android:background="@android:color/transparent"
+                                android:padding="4dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp" />
+
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                    <!-- 消息详细内容（展开状态显示） -->
+                    <LinearLayout
+                        android:id="@+id/message_detail_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/content_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5G毫米波通信系统项目荣获全国一等奖。该项目历时两年，团队成员通过不懈努力，在毫米波天线设计、信号处理算法优化等关键技术方面取得重大突破。项目成果已申请多项专利，并将在下月的国际通信会议上进行展示。"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_muted"
+                            android:lineSpacingExtra="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 消息4 - 学术讲座通知 -->
+                <LinearLayout
+                    android:id="@+id/message_item_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_message_border_orange"
+                    android:padding="32dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- 消息头部（收缩状态显示） -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        
+                        <!-- 标签区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            
+                            <!-- 今日消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_today_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_blue"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 重要消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_important_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="重要消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_orange"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 消息类型标签 -->
+                            <TextView
+                                android:id="@+id/tag_type_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="学术讲座"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_green"
+                                android:padding="6dp" />
+                                
+                        </LinearLayout>
+                        
+                        <!-- 消息内容区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- 消息标题 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/title_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="学术讲座通知"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/time_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2023-12-15 14:00"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_muted"
+                                android:layout_marginTop="4dp" />
+
+                        </LinearLayout>
+
+                            <!-- 展开/收起按钮 -->
+                            <Button
+                                android:id="@+id/btn_expand_4"
+                                android:layout_width="120dp"
+                                android:layout_height="36dp"
+                                android:text="展开详细内容"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_blue"
+                                android:background="@android:color/transparent"
+                                android:padding="4dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp" />
+
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                    <!-- 消息详细内容（展开状态显示） -->
+                    <LinearLayout
+                        android:id="@+id/message_detail_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/content_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6G通信技术前沿发展趋势专题讲座。本次讲座将邀请业界知名专家，深入探讨6G技术的最新发展动态、关键技术突破以及未来应用场景。内容涵盖太赫兹通信、全息通信、脑机接口等前沿技术领域。"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_muted"
+                            android:lineSpacingExtra="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 消息5 - 新设备到货通知 -->
+                <LinearLayout
+                    android:id="@+id/message_item_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_message_border_blue"
+                    android:padding="32dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- 消息头部（收缩状态显示） -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        
+                        <!-- 标签区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            
+                            <!-- 今日消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_today_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_blue"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 重要消息标签 -->
+                            <TextView
+                                android:id="@+id/tag_important_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="重要消息"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_orange"
+                                android:padding="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="visible" />
+                            
+                            <!-- 消息类型标签 -->
+                            <TextView
+                                android:id="@+id/tag_type_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="设备通知"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_tag_green"
+                                android:padding="6dp" />
+                                
+                        </LinearLayout>
+                        
+                        <!-- 消息内容区域 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- 消息标题 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/title_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="新设备到货通知"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/time_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2023-12-13 10:15"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_muted"
+                                android:layout_marginTop="4dp" />
+
+                        </LinearLayout>
+
+                            <!-- 展开/收起按钮 -->
+                            <Button
+                                android:id="@+id/btn_expand_5"
+                                android:layout_width="120dp"
+                                android:layout_height="36dp"
+                                android:text="展开详细内容"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_blue"
+                                android:background="@android:color/transparent"
+                                android:padding="4dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- 消息详细内容（展开状态显示） -->
+                    <LinearLayout
+                        android:id="@+id/message_detail_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/content_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="新一代FPGA开发板已到货，欢迎预约使用。本批设备为最新型号，具备更强的处理能力和更丰富的接口资源。设备已完成验收并投入使用，可通过设备管理系统进行预约。"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_muted"
+                            android:lineSpacingExtra="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 分页控件 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:padding="16dp">
+
+            <!-- 上一页按钮 -->
+            <Button
+                android:id="@+id/btn_prev_page"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="上一页"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_primary"
+                android:layout_marginEnd="16dp"
+                android:enabled="false" />
+
+            <!-- 页码显示 -->
+            <TextView
+                android:id="@+id/tv_page_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第 1 页 / 共 2 页"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- 下一页按钮 -->
+            <Button
+                android:id="@+id/btn_next_page"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="下一页"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_primary"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

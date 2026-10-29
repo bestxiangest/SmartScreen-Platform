@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_management_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 页面标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="基地基金委员会管理办法"
+                android:textColor="@color/text_primary"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/jiemianbiaoti"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="规范基地基金使用，完善管理制度体系"
+                android:textColor="@color/text_muted"
+                android:textSize="20sp"
+                android:fontFamily="@font/jiemianxiaozi" />
+
+        </LinearLayout>
+
+        <!-- 左右分栏主要内容区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- 左侧内容区域 - 基金使用管理办法 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/bg_orange_border_light_blue"
+                android:elevation="4dp">
+
+                <!-- 基金使用管理办法标题 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="基金使用暂行管理办法"
+                    android:textColor="@color/primary_color"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/alimama"
+                    android:gravity="center" />
+
+                <!-- 基金使用管理办法内容 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="第一条 总则\n为规范基地基金的使用和管理，确保基金使用的合理性和有效性，特制定本办法。\n\n第二条 适用范围\n本办法适用于基地内所有涉及基金使用的项目和活动。\n\n第三条 基金用途\n• 科研项目资助\n• 设备采购和维护\n• 学术交流活动\n• 人才培养项目\n• 基础设施建设\n\n第四条 申请流程\n1. 提交申请表和项目计划书\n2. 部门初审和预算评估\n3. 基金委员会审议\n4. 批准后执行和监督\n\n第五条 监督管理\n建立健全的监督机制，确保基金使用的透明度和规范性。\n\n第六条 资金管理\n• 专款专用，不得挪用\n• 建立详细的财务记录\n• 定期进行财务审计\n• 公开透明的资金使用情况\n\n第七条 违规处理\n对违反本办法的行为，将根据情节轻重给予相应处理，包括但不限于：\n• 警告和通报批评\n• 暂停或取消项目资助\n• 追回已拨付资金\n• 取消申请资格"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp" />
+
+            </LinearLayout>
+
+            <!-- 右侧内容区域 - 校外导师管理办法 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/bg_orange_border_light_blue"
+                android:elevation="4dp">
+
+                <!-- 校外导师管理办法标题 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="校外导师暂行管理办法"
+                    android:textColor="@color/primary_color"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/alimama"
+                    android:gravity="center" />
+
+                <!-- 校外导师管理办法内容 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="第一条 聘任条件\n校外导师应具备以下基本条件：\n• 具有高级专业技术职务或丰富实践经验\n• 在相关领域有突出成就和影响力\n• 具备良好的职业道德和敬业精神\n• 热心教育事业，愿意承担指导责任\n\n第二条 职责要求\n• 指导学生专业实践和毕业设计\n• 参与人才培养方案制定\n• 开展学术讲座和技术交流\n• 协助基地建设和发展\n• 参与学生实习实训指导\n\n第三条 管理制度\n• 建立导师档案和评价体系\n• 定期考核和动态调整\n• 提供必要的工作条件和支持\n• 给予相应的待遇和荣誉\n• 建立沟通协调机制\n\n第四条 考核评价\n每年进行一次综合考核，根据指导效果和贡献程度进行评价。\n\n第五条 权利义务\n• 享有指导学生的权利\n• 获得相应的工作支持\n• 参与相关学术活动\n• 履行指导职责\n• 遵守学校相关规定\n\n第六条 聘期管理\n校外导师聘期一般为三年，期满可续聘。"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

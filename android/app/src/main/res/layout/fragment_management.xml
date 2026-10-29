@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_management_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:clipToPadding="false">
+
+        <!-- 页面标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/management_title"
+                android:textColor="@color/text_primary"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/jiemianbiaoti"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/management_subtitle"
+                android:textColor="@color/text_muted"
+                android:textSize="20sp"
+                android:fontFamily="@font/jiemianxiaozi" />
+
+        </LinearLayout>
+
+        <!-- 基地管理团队与职能分配 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_team_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/management_card_surface"
+            android:foreground="@drawable/ripple_card_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- 左侧图片区域 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/manage_1"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true" />
+
+                <!-- 右侧内容区域 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/bg_orange_border_light_blue">
+
+                    <!-- 标题区域 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_team_title"
+                        android:textColor="@color/management_title_primary"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/alimama"
+                        android:layout_marginBottom="16dp"
+                        android:letterSpacing="0.01" />
+
+                    <!-- 第一部分内容 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_team_content"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="6dp"
+                        android:layout_marginBottom="18dp"
+                        android:alpha="0.87" />
+
+                    <!-- 渐隐渐现分隔线 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/bg_gradient_divider"
+                        android:layout_marginBottom="18dp" />
+
+                    <!-- 第二部分内容（分点列表） -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_team_points"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="8dp"
+                        android:alpha="0.87" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 基地项目管理办法 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_project_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/management_card_surface"
+            android:foreground="@drawable/ripple_card_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- 左侧图片区域 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/manage_2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true" />
+
+                <!-- 右侧内容区域 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/bg_orange_border_light_blue">
+
+                    <!-- 标题区域 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_project_title"
+                        android:textColor="@color/management_title_primary"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/alimama"
+                        android:layout_marginBottom="16dp"
+                        android:letterSpacing="0.01" />
+
+                    <!-- 第一部分内容 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_project_content"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="6dp"
+                        android:layout_marginBottom="18dp"
+                        android:alpha="0.87" />
+
+                    <!-- 渐隐渐现分隔线 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/bg_gradient_divider"
+                        android:layout_marginBottom="18dp" />
+
+                    <!-- 第二部分内容（分点列表） -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_project_points"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="8dp"
+                        android:alpha="0.87" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 基地成员管理办法 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_member_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/management_card_surface"
+            android:foreground="@drawable/ripple_card_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- 左侧图片区域 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/manage_3"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true" />
+
+                <!-- 右侧内容区域 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/bg_orange_border_light_blue">
+
+                    <!-- 标题区域 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_member_title"
+                        android:textColor="@color/management_title_primary"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/alimama"
+                        android:layout_marginBottom="16dp"
+                        android:letterSpacing="0.01" />
+
+                    <!-- 第一部分内容 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_member_content"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="6dp"
+                        android:layout_marginBottom="18dp"
+                        android:alpha="0.87" />
+
+                    <!-- 渐隐渐现分隔线 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/bg_gradient_divider"
+                        android:layout_marginBottom="18dp" />
+
+                    <!-- 第二部分内容（分点列表） -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_member_points"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="8dp"
+                        android:alpha="0.87" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 基地资料与材料设备管理办法 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_resource_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/management_card_surface"
+            android:foreground="@drawable/ripple_card_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- 左侧图片区域 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/manage_4"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true" />
+
+                <!-- 右侧内容区域 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/bg_orange_border_light_blue">
+
+                    <!-- 标题区域 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_resource_title"
+                        android:textColor="@color/management_title_primary"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/alimama"
+                        android:layout_marginBottom="16dp"
+                        android:letterSpacing="0.01" />
+
+                    <!-- 第一部分内容 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_resource_content"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="6dp"
+                        android:layout_marginBottom="18dp"
+                        android:alpha="0.87" />
+
+                    <!-- 渐隐渐现分隔线 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/bg_gradient_divider"
+                        android:layout_marginBottom="18dp" />
+
+                    <!-- 第二部分内容（分点列表） -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_resource_points"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="8dp"
+                        android:alpha="0.87" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 基地成员管理办法 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_daily_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/management_card_surface"
+            android:foreground="@drawable/ripple_card_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- 左侧图片区域 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/manage_5"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true" />
+
+                <!-- 右侧内容区域 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/bg_orange_border_light_blue">
+
+                    <!-- 标题区域 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_daily_title"
+                        android:textColor="@color/management_title_primary"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/alimama"
+                        android:layout_marginBottom="16dp"
+                        android:letterSpacing="0.01" />
+
+                    <!-- 第一部分内容 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_daily_content"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="6dp"
+                        android:layout_marginBottom="18dp"
+                        android:alpha="0.87" />
+
+                    <!-- 渐隐渐现分隔线 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/bg_gradient_divider"
+                        android:layout_marginBottom="18dp" />
+
+                    <!-- 第二部分内容（分点列表） -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_daily_points"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:lineSpacingExtra="8dp"
+                        android:alpha="0.87" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

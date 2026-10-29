@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 Color System for Management Theme -->
+    
+    <!-- Primary Colors -->
+    <color name="md_theme_primary">#1565C0</color>
+    <color name="md_theme_on_primary">#FFFFFF</color>
+    <color name="md_theme_primary_container">#E3F2FD</color>
+    <color name="md_theme_on_primary_container">#0D47A1</color>
+    
+    <!-- Secondary Colors -->
+    <color name="md_theme_secondary">#2E7D32</color>
+    <color name="md_theme_on_secondary">#FFFFFF</color>
+    <color name="md_theme_secondary_container">#E8F5E8</color>
+    <color name="md_theme_on_secondary_container">#1B5E20</color>
+    
+    <!-- Tertiary Colors -->
+    <color name="md_theme_tertiary">#5E35B1</color>
+    <color name="md_theme_on_tertiary">#FFFFFF</color>
+    <color name="md_theme_tertiary_container">#F3E5F5</color>
+    <color name="md_theme_on_tertiary_container">#4A148C</color>
+    
+    <!-- Surface Colors -->
+    <color name="md_theme_surface">#FEFBFF</color>
+    <color name="md_theme_on_surface">#1C1B1F</color>
+    <color name="md_theme_surface_variant">#F4F4F4</color>
+    <color name="md_theme_on_surface_variant">#49454F</color>
+    
+    <!-- Background Colors -->
+    <color name="md_theme_background">#FEFBFF</color>
+    <color name="md_theme_on_background">#1C1B1F</color>
+    
+    <!-- Error Colors -->
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_on_error">#FFFFFF</color>
+    <color name="md_theme_error_container">#FFDAD6</color>
+    <color name="md_theme_on_error_container">#410002</color>
+    
+    <!-- Outline Colors -->
+    <color name="md_theme_outline">#79747E</color>
+    <color name="md_theme_outline_variant">#CAC4D0</color>
+    
+    <!-- Management Specific Colors -->
+    <color name="management_card_surface">#FFFFFF</color>
+    <color name="management_card_shadow">#1A000000</color>
+    <color name="management_title_primary">#0D47A1</color>
+    <color name="management_title_secondary">#1565C0</color>
+    <color name="management_text_primary">#1C1B1F</color>
+    <color name="management_text_secondary">#49454F</color>
+    <color name="management_text_muted">#79747E</color>
+    <color name="management_divider">#E0E0E0</color>
+    <color name="management_accent">#2E7D32</color>
+    
+    <!-- Management Theme Colors -->
+    <color name="management_primary">#1565C0</color>
+    <color name="management_primary_variant">#0D47A1</color>
+    <color name="management_primary_light">#42A5F5</color>
+    <color name="management_on_primary">#FFFFFF</color>
+    <color name="management_secondary">#2E7D32</color>
+    <color name="management_secondary_variant">#1B5E20</color>
+    <color name="management_on_secondary">#FFFFFF</color>
+    <color name="management_surface">#FEFBFF</color>
+    <color name="management_on_surface">#1C1B1F</color>
+    <color name="management_background">#FEFBFF</color>
+    <color name="management_on_background">#1C1B1F</color>
+    <color name="management_error">#BA1A1A</color>
+    <color name="management_on_error">#FFFFFF</color>
+    
+    <!-- Management Card States -->
+    <color name="management_card_border">#E0E0E0</color>
+    <color name="management_card_pressed">#F5F5F5</color>
+    <color name="management_card_focused">#E3F2FD</color>
+    <color name="management_card_hover">#F8F9FA</color>
+    
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#E3F2FD</color>
+    <color name="gradient_end">#BBDEFB</color>
+    
+    <!-- Status Colors -->
+    <color name="status_success">#2E7D32</color>
+    <color name="status_warning">#F57C00</color>
+    <color name="status_info">#1976D2</color>
+</resources>
