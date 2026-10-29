@@ -1,0 +1,259 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "智能班牌",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/device/device",
+			"style": {
+				"navigationBarTitleText": "设备管理"
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息中心",
+				"navigationBarBackgroundColor": "#2196F3",  // 设置导航栏背景色（微信绿）
+				"navigationBarTextStyle": "white",          // 设置标题文字颜色
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/message/compose",
+			"style": {
+				"navigationBarTitleText": "新建消息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/message/detail",
+			"style": {
+				"navigationBarTitleText": "消息详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/device/booking",
+			"style": {
+				"navigationBarTitleText": "设备预约",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/device/device-selection",
+			"style": {
+				"navigationBarTitleText": "选择设备",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/device/repair",
+			"style": {
+				"navigationBarTitleText": "设备报修"
+			}
+		},
+		{
+			"path": "pages/project/project",
+			"style": {
+				"navigationBarTitleText": "项目协作",
+				"navigationBarBackgroundColor": "#2196F3"
+			}
+		},
+		{
+			"path": "pages/project/create",
+			"style": {
+				"navigationBarTitleText": "创建项目",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/project/detail",
+			"style": {
+				"navigationBarTitleText": "项目详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/safety/safety",
+			"style": {
+				"navigationBarTitleText": "安全监控",
+				"navigationBarBackgroundColor": "#2196F3"
+			}
+		},
+
+		{
+			"path": "pages/ai/ai",
+			"style": {
+				"navigationBarTitleText": "AI助手",
+				"navigationStyle": "custom"
+			}
+		},
+
+		{
+			"path": "pages/ai/evaluation",
+			"style": {
+				"navigationBarTitleText": "AI项目评估",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/ai/talent",
+			"style": {
+				"navigationBarTitleText": "AI人才培养",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/campus/campus",
+			"style": {
+				"navigationBarTitleText": "校园服务",
+				"navigationStyle": "custom"
+			}
+		},
+
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationBarBackgroundColor": "#2196F3"
+			}
+		},
+		{
+			"path": "pages/profile/personal-info",
+			"style": {
+				"navigationBarTitleText": "个人简介"
+			}
+		},
+		{
+			"path": "pages/profile/member-list",
+			"style": {
+				"navigationBarTitleText": "基地花名册"
+			}
+		},
+		{
+			"path": "pages/profile/member-detail",
+			"style": {
+				"navigationBarTitleText": "成员详情"
+			}
+		},
+		{
+			"path": "pages/profile/edit-info",
+			"style": {
+				"navigationBarTitleText": "编辑信息"
+			}
+		},
+		{
+			"path": "pages/maintenance/maintenance",
+			"style": {
+				"navigationBarTitleText": "维保调度中心",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/maintenance/fault-report",
+			"style": {
+				"navigationBarTitleText": "故障申报",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/maintenance/work-order",
+			"style": {
+				"navigationBarTitleText": "工单管理",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/maintenance/detail",
+			"style": {
+				"navigationBarTitleText": "工单详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/warehouse/warehouse",
+			"style": {
+				"navigationBarTitleText": "电子元件库",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/warehouse/category",
+			"style": {
+				"navigationBarTitleText": "元件分类",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/warehouse/apply-process",
+			"style": {
+				"navigationBarTitleText": "申领流程",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/warehouse/detail",
+			"style": {
+				"navigationBarTitleText": "物料详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/duty/duty",
+			"style": {
+				"navigationBarTitleText": "值班调度中心",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "智能班牌",
+		"navigationBarBackgroundColor": "#2979FF",
+		"backgroundColor": "#F5F5F5"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#2979FF",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"iconPath": "static/tabbar/message.png",
+				"selectedIconPath": "static/tabbar/message-active.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/project/project",
+				"iconPath": "static/tabbar/project.png",
+				"selectedIconPath": "static/tabbar/project-active.png",
+				"text": "项目"
+			},
+			{
+				"pagePath": "pages/safety/safety",
+				"iconPath": "static/tabbar/safety.png",
+				"selectedIconPath": "static/tabbar/safety-active.png",
+				"text": "安全"
+			},
+			{
+				"pagePath": "pages/profile/profile",
+				"iconPath": "static/tabbar/profile.png",
+				"selectedIconPath": "static/tabbar/profile-active.png",
+				"text": "我的"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}

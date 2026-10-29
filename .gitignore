@@ -1,0 +1,39 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.egg-info/
+.env
+server/.env
+
+# ---- Node ----
+node_modules/
+dist/
+unpackage/
+
+# ---- Android ----
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/captures/
+*.apk
+*.aab
+*.jks
+*.keystore
+!android/gradle/wrapper/gradle-wrapper.jar
+
+# ---- IDE ----
+.idea/
+*.iml
+.vscode/
+
+# ---- 上传与运行时产物 ----
+server/static/uploads/*
+!server/static/uploads/.gitkeep
+*.log
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db
